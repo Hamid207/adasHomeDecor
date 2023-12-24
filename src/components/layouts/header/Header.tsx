@@ -14,8 +14,9 @@ const setActive = ({ isActive }: { isActive: boolean }) =>
         strokeWidth: "1px",
         borderBottom: "1px #B8926A solid",
         paddingBottom: "30px",
+        fontWeight: "600",
       }
-    : { color: "black" };
+    : { color: "#2D2D2B" };
 
 const Header = () => {
   return (
@@ -63,7 +64,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/collectios"
+                to="/collections"
                 className={style.link}
                 style={setActive}
               >
@@ -76,7 +77,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/constacts" className={style.link} style={setActive}>
+              <NavLink to="/contact" className={style.link} style={setActive}>
                 Contact
               </NavLink>
             </li>
