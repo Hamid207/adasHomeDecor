@@ -1,5 +1,13 @@
+import MainImageAndText from "../../components/mainImageAndText/MainImageAndText";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <section>
+        <MainImageAndText />
+      </section>
+    </>
+  );
 };
 
 export default HomePage;

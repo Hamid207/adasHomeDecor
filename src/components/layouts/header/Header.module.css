@@ -20,6 +20,10 @@
 }
 
 .azBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   width: 30px;
   height: 30px;
   background-color: #eae6df;
@@ -28,9 +32,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  font-family: "Nova Square", sans-serif;
-  font-family: "Raleway", sans-serif;
-  font-family: "Rubik", sans-serif;
+  font-family: "Raleway";
   border-radius: 5px;
   border: 1px solid var(--Dusty-rose, #d4c8be);
 }

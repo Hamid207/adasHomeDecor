@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Nova+Square&family=Raleway&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Raleway&family=Rubik&display=swap");
+
+.body {
+  margin: 30px;
+}
+
+.main_text_body {
+  max-width: 830px;
+  max-height: 162px;
+  flex-shrink: 0;
+  position: relative;
+  top: -600px;
+  z-index: 2;
+}
+
+.main_text {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 86px;
+  font-family: "GFS Didot";
+}
+
+.big_img_and__blur_body {
+  max-width: 860px;
+  max-height: 757px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.blur {
+  height: 715px;
+  max-width: 330px;
+  border-radius: 5px 5px 0px 0px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7.5px);
+  position: relative;
+  z-index: 1;
+}
+
+.img_body {
+  position: absolute;
+  top: 0;
+}
+
+.text_second_text_body {
+  width: 447px;
+  margin-top: 40px;
+}
+
+.text_second_text_body > p {
+  color: var(--Black, #2d2d2b);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.show_now_link_body {
+  width: 330px;
+  height: 54px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.show_now_link {
+  border-radius: 10px;
+  display: flex;
+  text-decoration: none;
+  gap: 20px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #b8926a;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}

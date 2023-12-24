@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../../../assets/Container.css";
 import style from "./Header.module.css";
 
@@ -24,25 +24,27 @@ const Header = () => {
       <nav>
         <div className={style.headerMain}>
           <div className={style.header_left}>
-            <button className={style.azBtn}>Az</button>
-            <button className={style.search_btn}>
+            <Link to="" className={style.azBtn}>
+              Az
+            </Link>
+            <Link to="" className={style.search_btn}>
               <img
                 src="/public/header/search.png"
                 alt=""
                 className={style.img}
               />
-            </button>
+            </Link>
           </div>
           <div>
             <p className={style.header_title}>HomeDecor</p>
           </div>
           <div className={style.header_right}>
-            <button className={style.shop_user_button}>
+            <Link to="/" className={style.shop_user_button}>
               <img src="/public/header/shop.png" alt="" className={style.img} />
-            </button>
-            <button className={style.shop_user_button}>
+            </Link>
+            <Link to="" className={style.shop_user_button}>
               <img src="/public/header/user.png" alt="" className={style.img} />
-            </button>
+            </Link>
           </div>
         </div>
         <div className={style.header_nav}>
