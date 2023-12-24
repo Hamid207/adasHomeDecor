@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Raleway&family=Rubik&display=swap");
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.azBtn {
+  width: 30px;
+  height: 30px;
+  background-color: #eae6df;
+  color: var(--Black, #2d2d2b);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Nova Square", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
+  border-radius: 5px;
+  border: 1px solid var(--Dusty-rose, #d4c8be);
+}
+
+.search_btn {
+  width: 22px;
+  height: 22px;
+  background-color: #eae6df;
+  margin-left: 37px;
+}
+
+.header_title {
+  color: var(--Black, #2d2d2b);
+  text-align: center;
+  font-family: Didot;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop_user_button {
+  width: 24px;
+  height: 24px;
+  background-color: #eae6df;
+  margin-left: 30px;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: center;
+}
+.header_nav_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.link {
+  color: var(--Black, #2d2d2b);
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.active::after {
+  content: "";
+  height: 1px;
+  display: block;
+  stroke-width: 1px;
+  border-bottom: 1px black solid;
+  padding-bottom: 10px;
+}
