@@ -1,3 +1,4 @@
+import AboutUs from "../../components/aboutUs/AboutUs";
 import MainImageAndText from "../../components/mainImageAndText/MainImageAndText";
 
 const HomePage = () => {
@@ -5,6 +6,10 @@ const HomePage = () => {
     <>
       <section>
         <MainImageAndText />
+      </section>
+      <section>{/*swipe*/}</section>
+      <section>
+        <AboutUs />
       </section>
     </>
   );
