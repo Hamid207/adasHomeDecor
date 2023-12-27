@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Nova+Square&family=Raleway&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Raleway&family=Rubik&display=swap");
+
+.body {
+  height: 400px;
+  background-image: url("/public/main/dis.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.body > p {
+  color: #fff;
+  font-family: "Didot";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.text_body {
+  max-width: 440px;
+  margin-bottom: 52px;
+  margin-top: 50px;
+}
+
+.text_body > p {
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

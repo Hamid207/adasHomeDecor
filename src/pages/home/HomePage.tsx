@@ -1,5 +1,6 @@
 import AboutUs from "../../components/aboutUs/AboutUs";
 import MainImageAndText from "../../components/mainImageAndText/MainImageAndText";
+import Discount from "../../components/section4/Discount";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,9 @@ const HomePage = () => {
       <section>{/*swipe*/}</section>
       <section>
         <AboutUs />
+      </section>
+      <section>
+        <Discount />
       </section>
     </>
   );
