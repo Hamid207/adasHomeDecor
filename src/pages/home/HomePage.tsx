@@ -1,6 +1,7 @@
 import AboutUs from "../../components/aboutUs/AboutUs";
 import MainImageAndText from "../../components/mainImageAndText/MainImageAndText";
-import Discount from "../../components/section4/Discount";
+import Discount from "../../components/discount/Discount";
+import Products from "../../components/products/Products";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,9 @@ const HomePage = () => {
       </section>
       <section>
         <Discount />
+      </section>
+      <section>
+        <Products />
       </section>
     </>
   );
