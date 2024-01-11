@@ -13,27 +13,29 @@ interface Test {
 
 const CollectionSlider = (props: Test) => {
   return (
-    <div className="App">
-      <div style={{ textAlign: "left" }}>
-        <h2>{props.name}</h2>
-      </div>
-      <Swiper
-        modules={[Navigation, Pagination, A11y]}
-        spaceBetween={20}
-        slidesPerView="auto"
-      >
-        <SwiperSlide className="res-slide">
-          <div className="blur">
-            <p>asdasdasd</p>
-          </div>
-        </SwiperSlide>
+    <section>
+      <div className="App">
+        <div style={{ textAlign: "left" }}>
+          <h2>{props.name}</h2>
+        </div>
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={20}
+          slidesPerView="auto"
+        >
+          <SwiperSlide className="res-slide">
+            <div className="blur">
+              <p>asdasdasd</p>
+            </div>
+          </SwiperSlide>
 
-        {/* <SwiperSlide className="res-slide">
+          {/* <SwiperSlide className="res-slide">
           <ProductsGrid />
         </SwiperSlide> */}
-        <SwiperNavButtons />
-      </Swiper>
-    </div>
+          <SwiperNavButtons />
+        </Swiper>
+      </div>
+    </section>
   );
 };
 

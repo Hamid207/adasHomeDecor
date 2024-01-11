@@ -3,31 +3,19 @@ import MainImageAndText from "../../components/mainImageAndText/MainImageAndText
 import Discount from "../../components/discount/Discount";
 import Products from "../../components/products/Products";
 import CollectionSlider from "../../components/sliders/collectionSlider/CollectionSlider";
+import Contact from "../../components/contact/Contact";
 
 const HomePage = () => {
   return (
     <>
-      <section>
-        <MainImageAndText />
-      </section>
-      <section>
-        <CollectionSlider name="" />
-      </section>
-      <section>
-        <AboutUs />
-      </section>
-      <section>
-        <Discount />
-      </section>
-      <section>
-        <Products />
-      </section>
-      <section>
-        <CollectionSlider name="MOST POPULAR" />
-      </section>
-      <section>
-        <CollectionSlider name="COLLECTIONS" />
-      </section>
+      <MainImageAndText />
+      <CollectionSlider name="" />
+      <AboutUs />
+      <Discount />
+      <Products />
+      <CollectionSlider name="MOST POPULAR" />
+      <CollectionSlider name="COLLECTIONS" />
+      <Contact />
     </>
   );
 };

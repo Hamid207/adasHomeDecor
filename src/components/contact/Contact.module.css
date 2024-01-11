@@ -1,0 +1,48 @@
+.body {
+  margin-top: 59px;
+  height: 417px;
+  display: flex;
+  gap: 137px;
+}
+
+.title {
+  color: var(--Black, #2d2d2b);
+  font-family: "Didot";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input {
+  height: 54px;
+  border-radius: 10px;
+  border: 1px solid var(--Dusty-rose, #d4c8be);
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.message_input {
+  height: 136px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid var(--Dusty-rose, #d4c8be);
+  padding: 20px;
+}
+
+.img_body {
+}
+
+::placeholder {
+  color: var(--Grey, #b0b0b0);
+}
