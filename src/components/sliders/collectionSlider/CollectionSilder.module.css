@@ -1,0 +1,28 @@
+.see_all {
+  color: #b8926a;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  text-decoration-line: underline;
+  margin-right: 30px;
+}
+
+.title_body {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-left: 20px;
+  /* margin-bottom: 60px; */
+}
+
+.title {
+  color: #2d2d2b;
+  font-family: "Didot";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+}

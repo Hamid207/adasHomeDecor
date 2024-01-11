@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./CollectionSilder.css";
 import { SwiperNavButtons } from "./SwiperNavButton";
-import ProductsGrid from "../../products/productsGrid/ProductsGrid";
+import { Link } from "react-router-dom";
+import style from "./CollectionSilder.module.css";
 
 interface Test {
   name: string;
@@ -15,8 +16,11 @@ const CollectionSlider = (props: Test) => {
   return (
     <section>
       <div className="App">
-        <div style={{ textAlign: "left" }}>
-          <h2>{props.name}</h2>
+        <div style={{ textAlign: "left" }} className={style.title_body}>
+          <h2 className={style.title}>{props.name}</h2>
+          <Link to="/" className={style.see_all}>
+            SEE ALL
+          </Link>
         </div>
         <Swiper
           modules={[Navigation, Pagination, A11y]}
