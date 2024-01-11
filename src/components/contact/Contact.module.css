@@ -1,12 +1,12 @@
 .body {
   margin-top: 59px;
-  height: 417px;
   display: flex;
-  gap: 137px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .title {
-  color: var(--Black, #2d2d2b);
+  color: #2d2d2b;
   font-family: "Didot";
   font-size: 48px;
   font-style: normal;
@@ -36,13 +36,20 @@
   height: 136px;
   resize: none;
   border-radius: 10px;
-  border: 1px solid var(--Dusty-rose, #d4c8be);
+  border: 1px solid #d4c8be;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
   padding: 20px;
 }
 
 .img_body {
+  max-width: 680px;
+  max-height: 417px;
 }
 
 ::placeholder {
-  color: var(--Grey, #b0b0b0);
+  color: #b0b0b0;
 }

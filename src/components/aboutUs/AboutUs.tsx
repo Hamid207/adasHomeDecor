@@ -1,15 +1,39 @@
 import style from "./AboutUs.module.css";
 import CustomLink from "../ui/CustomLink";
 
-const AboutUs = () => {
+interface Page {
+  pageName: string;
+}
+
+const AboutUs = (props: Page) => {
+  let isHiden: boolean = true;
+  switch (true) {
+    case props.pageName == "about":
+      isHiden = false;
+      break;
+    case props.pageName == "home":
+      isHiden = true;
+      break;
+  }
+
   return (
     <>
       <section>
         <div className={style.body}>
+          <div className={style.navigation_title_body}>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+            </ul>
+          </div>
           <p className={style.title}>ABOUT US</p>
           <div className={style.img_text_and_btn_body}>
             <div className={style.img_body}>
-              <img src="/public/main/aboutUs.png" alt="" />
+              <img
+                src="/public/main/aboutUs.png"
+                alt=""
+                className={style.img}
+              />
             </div>
             <div className={style.text_btn_body}>
               <p className={style.txt1}>
@@ -24,6 +48,8 @@ const AboutUs = () => {
                 et molestiae non recusandae. Itaque earum rerum hic tenetur a
                 sapiente delectus, ut aut reiciendis voluptatibus maiores alias
                 consequatur aut perferendis doloribus asperiores repellat.
+              </p>
+              <p className={style.txt3}>
                 Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                 reiciendis voluptatibus maiores alias consequatur aut
                 perferendis doloribus asperiores repellat.
@@ -34,6 +60,7 @@ const AboutUs = () => {
                 width="330px"
                 height="54px"
                 backColor="none"
+                hidden={isHiden}
               ></CustomLink>
             </div>
           </div>

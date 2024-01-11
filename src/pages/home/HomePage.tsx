@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       <MainImageAndText />
       <CollectionSlider name="" />
-      <AboutUs />
+      <AboutUs pageName="home" />
       <Discount />
       <Products />
       <CollectionSlider name="MOST POPULAR" />

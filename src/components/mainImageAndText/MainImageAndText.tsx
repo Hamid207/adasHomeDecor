@@ -26,6 +26,7 @@ const MainImageAndText = () => {
               width="330px"
               height="54px"
               backColor="borown"
+              hidden={true}
             ></CustomLink>
           </div>
         </div>

@@ -12,8 +12,8 @@ const Contact = () => {
             <input type="text" placeholder="E-MAIL ADRESS" />
             <input type="text" placeholder="THEME" />
             <textarea
-              placeholder="YOUR MESSAGE"
               className={style.message_input}
+              placeholder="YOUR MESSAGE"
             />
             <button>
               <CustomLink
@@ -22,11 +22,12 @@ const Contact = () => {
                 width="563px"
                 height="54px"
                 backColor="brown"
+                hidden={true}
               />
             </button>
           </form>
         </div>
-        <div>
+        <div className={style.img_body}>
           <img src="/public/main/contactImg.png" alt="" />
         </div>
       </div>

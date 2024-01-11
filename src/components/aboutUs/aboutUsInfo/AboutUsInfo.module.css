@@ -1,0 +1,26 @@
+.list_body {
+  display: flex;
+  justify-content: space-between;
+  margin: 130px 117px 130px 117px;
+}
+
+.list_body > li > div > h2 {
+  color: #b8926a;
+  text-align: center;
+  font-family: "Didot";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 27px;
+}
+
+.list_body > li > div > p {
+  color: #2d2d2b;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
