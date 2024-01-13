@@ -1,7 +1,7 @@
 import AboutUs from "../../components/aboutUs/AboutUs";
 import AboutUsInfo from "../../components/aboutUs/aboutUsInfo/AboutUsInfo";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <div>
       <AboutUs pageName="about" />
@@ -10,4 +10,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

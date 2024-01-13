@@ -20,7 +20,10 @@ const AboutUs = (props: Page) => {
     <>
       <section>
         <div className={style.body}>
-          <div className={style.navigation_title_body}>
+          <div
+            className={style.navigation_title_body}
+            style={{ visibility: isHiden ? "hidden" : "visible" }}
+          >
             <ul>
               <li>Home</li>
               <li>About</li>
