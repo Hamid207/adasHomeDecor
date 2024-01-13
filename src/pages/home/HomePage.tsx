@@ -15,7 +15,7 @@ const HomePage = () => {
       <Products />
       <CollectionSlider name="MOST POPULAR" />
       <CollectionSlider name="COLLECTIONS" />
-      <Contact />
+      <Contact pageName="home" />
     </>
   );
 };

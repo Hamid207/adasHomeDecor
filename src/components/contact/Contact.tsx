@@ -1,9 +1,29 @@
 import style from "./Contact.module.css";
 import CustomLink from "../ui/CustomLink";
 
-const Contact = () => {
+interface Page {
+  pageName: string;
+}
+
+const Contact = (props: Page) => {
+  let isHiden: boolean = true;
+  switch (true) {
+    case props.pageName == "contact":
+      isHiden = false;
+      break;
+  }
+
   return (
     <section>
+      <div
+        className={style.navigation_title_body}
+        style={{ display: isHiden ? "none" : "block" }}
+      >
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </div>
       <p className={style.title}>CONTACT</p>
       <div className={style.body}>
         <div>
