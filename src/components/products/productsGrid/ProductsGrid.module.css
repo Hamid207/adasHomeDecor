@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Nova+Square&family=Raleway&family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Raleway&family=Rubik&display=swap");
 
+.link {
+  text-decoration: none;
+  color: #2d2d2b;
+}
+
 .back_img_body {
   background-position: center;
   background-repeat: no-repeat;
@@ -36,13 +41,16 @@
   font-family: "Raleway";
   font-size: 20px;
   font-style: normal;
+  color: #2d2d2b;
   font-weight: 500;
   line-height: 28px;
   margin-right: 10px;
   margin-top: 22px;
+  text-decoration: none;
 }
 
 .price {
+  text-decoration: none;
   color: #b8926a;
   font-family: "Raleway";
   font-size: 20px;

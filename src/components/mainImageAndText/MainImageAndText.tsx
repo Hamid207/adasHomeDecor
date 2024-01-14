@@ -1,5 +1,5 @@
 import style from "../mainImageAndText/MainImageAndText.module.css";
-import CustomLink from "../ui/CustomLink";
+import CustomLink from "../ui/customLink/CustomLink";
 
 const MainImageAndText = () => {
   return (

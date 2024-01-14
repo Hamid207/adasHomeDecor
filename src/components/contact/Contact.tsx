@@ -1,5 +1,5 @@
 import style from "./Contact.module.css";
-import CustomLink from "../ui/CustomLink";
+import CustomLink from "../ui/customLink/CustomLink";
 
 interface Page {
   pageName: string;

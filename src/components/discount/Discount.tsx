@@ -1,5 +1,5 @@
 import style from "./Discount.module.css";
-import CustomLink from "../ui/CustomLink";
+import CustomLink from "../ui/customLink/CustomLink";
 
 const Discount = () => {
   return (
