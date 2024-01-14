@@ -1,0 +1,21 @@
+.swiper_nav_btns {
+  margin-right: -10px;
+}
+
+.swiper_nav_btns button {
+  width: 31px;
+  height: 31px;
+
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: #b8926a;
+  color: #fff;
+  margin: 0px 0.5rem;
+  margin-top: 30px;
+  transition: all 0.5s;
+}
+
+.swiper_nav_btns button:hover {
+  cursor: pointer;
+}

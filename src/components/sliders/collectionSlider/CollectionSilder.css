@@ -17,8 +17,8 @@
 .swiper .res-slide {
   /* min-width: 300px;
     max-width: 400px; */
-  max-width: 330px;
-  min-height: 193px;
+  /* max-width: 330px;
+  min-height: 193px; */
   /* min-height: 350px; */
   /* border: 2px solid hsl(210, 100%, 50%); */
   border-radius: 10px;
@@ -28,7 +28,7 @@
   overflow: hidden;
 }
 
-.swiper-nav-btns {
+/* .swiper-nav-btns {
   margin-right: -10px;
 }
 
@@ -39,19 +39,16 @@
   border-radius: 50px;
   border: none;
   outline: none;
-  /* background-color: hsl(210, 100%, 50%); */
   background-color: #b8926a;
   color: #fff;
   margin: 0px 0.5rem;
-  /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
   margin-top: 30px;
   transition: all 0.5s;
 }
 
 .swiper-nav-btns button:hover {
-  /* background-color: hsl(210, 100%, 40%); */
   cursor: pointer;
-}
+} */
 
 .blur {
   width: 100%;

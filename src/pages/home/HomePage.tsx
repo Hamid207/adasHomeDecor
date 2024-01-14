@@ -9,12 +9,22 @@ const HomePage = () => {
   return (
     <>
       <MainImageAndText />
-      <CollectionSlider name="" />
+      <CollectionSlider name="" isHidden={false} width="330px" height="195px" />
       <AboutUs pageName="home" />
       <Discount />
       <Products />
-      <CollectionSlider name="MOST POPULAR" />
-      <CollectionSlider name="COLLECTIONS" />
+      <CollectionSlider
+        name="MOST POPULAR"
+        isHidden={false}
+        width="330px"
+        height="195px"
+      />
+      <CollectionSlider
+        name="COLLECTIONS"
+        isHidden={false}
+        width="330px"
+        height="195px"
+      />
       <Contact pageName="home" />
     </>
   );

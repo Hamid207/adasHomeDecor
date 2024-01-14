@@ -4,7 +4,7 @@ import style from "./ProductsGrid.module.css";
 const ProductsGrid = () => {
   return (
     <div>
-      <Link to="" className={style.link}>
+      <Link to="/productsDetail" className={style.link}>
         <div
           className={style.back_img_body}
           style={{ backgroundImage: `url("/public/main/sofa.png")` }}

@@ -10,13 +10,22 @@ import style from "./CollectionSilder.module.css";
 
 interface Test {
   name: string;
+  isHidden: boolean;
+  width: string;
+  height: string;
 }
 
 const CollectionSlider = (props: Test) => {
   return (
     <section>
       <div className="App">
-        <div style={{ textAlign: "left" }} className={style.title_body}>
+        <div
+          style={{
+            textAlign: "left",
+            display: props.isHidden ? "none" : "block",
+          }}
+          className={style.title_body}
+        >
           <h2 className={style.title}>{props.name}</h2>
           <Link to="/" className={style.see_all}>
             SEE ALL
@@ -27,8 +36,14 @@ const CollectionSlider = (props: Test) => {
           spaceBetween={20}
           slidesPerView="auto"
         >
-          <SwiperSlide className="res-slide">
-            <div className="blur">
+          <SwiperSlide
+            className="res-slide"
+            style={{ width: props.width, height: props.height }}
+          >
+            <div
+              style={{ display: props.isHidden ? "none" : "block" }}
+              className="blur"
+            >
               <p>asdasdasd</p>
             </div>
           </SwiperSlide>
@@ -36,7 +51,7 @@ const CollectionSlider = (props: Test) => {
           {/* <SwiperSlide className="res-slide">
           <ProductsGrid />
         </SwiperSlide> */}
-          <SwiperNavButtons />
+          <SwiperNavButtons isHidden={props.isHidden} />
         </Swiper>
       </div>
     </section>

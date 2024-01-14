@@ -3,6 +3,7 @@ import ProductsGrid from "./productsGrid/ProductsGrid";
 import style from "./Products.module.css";
 
 const Products = () => {
+  window.scrollTo(0, 0);
   return (
     <section>
       <div className={style.body}>

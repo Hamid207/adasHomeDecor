@@ -32,7 +32,8 @@ const CustomLink = (props: MyLink) => {
         style={{
           width: props.width,
           height: props.height,
-          visibility: props.hidden ? "visible" : "hidden",
+          // visibility: props.hidden ? "visible" : "hidden",
+          display: props.hidden ? "none" : "block",
         }}
       >
         <Link
