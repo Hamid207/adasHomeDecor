@@ -1,0 +1,61 @@
+.body {
+  margin-top: 193px;
+  /* margin-left: 30px;
+  margin-right: 136px; */
+}
+
+.title {
+  margin-bottom: 50px;
+  font-family: "Didot";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.password_body {
+  height: 54px;
+  width: 437px;
+  border-radius: 10px;
+  background-color: #eae6df;
+  border: 1px solid #d4c8be;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.password_body > input {
+  height: 100%;
+  width: 85%;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 20px;
+  border: none;
+  background-color: #eae6df;
+}
+
+.password_body > button {
+  width: 24px;
+  height: 24px;
+  margin-right: 25px;
+  background-color: #eae6df;
+}
+
+.forgot_password_link {
+  color: #b8926a;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.body > form {
+  margin-bottom: 17px;
+}

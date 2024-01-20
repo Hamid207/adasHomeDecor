@@ -42,7 +42,7 @@ const Header = () => {
             <Link to="/" className={style.shop_user_button}>
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>
-            <Link to="" className={style.shop_user_button}>
+            <Link to="/logIn" className={style.shop_user_button}>
               <img src="/public/header/user.png" alt="" className={style.img} />
             </Link>
           </div>
@@ -73,11 +73,7 @@ const Header = () => {
                 Collections
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/sale" className={style.link} style={setActive}>
-                Sale
-              </NavLink>
-            </li>
+
             <li>
               <NavLink to="/contact" className={style.link} style={setActive}>
                 Contact

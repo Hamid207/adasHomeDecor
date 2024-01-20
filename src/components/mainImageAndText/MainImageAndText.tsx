@@ -25,7 +25,7 @@ const MainImageAndText = () => {
               text="SHOP NOW"
               width="330px"
               height="54px"
-              backColor="borown"
+              backColor="brown"
               hidden={true}
             ></CustomLink>
           </div>

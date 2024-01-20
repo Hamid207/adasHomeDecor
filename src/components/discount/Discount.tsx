@@ -20,6 +20,7 @@ const Discount = () => {
           width="330px"
           height="54px"
           backColor="brown"
+          hidden={true}
         ></CustomLink>
       </div>
     </section>

@@ -5,9 +5,12 @@ import "../src/assets/Global.css";
 import AboutPage from "./pages/about/AboutPage";
 import ProductsPage from "./pages/products/ProductsPage";
 import CollectionsPage from "./pages/collection/CollectionsPage";
-import Sale from "./pages/sale/Sale";
 import ContactPage from "./pages/contact/ContactPage";
 import ProductDetail from "./components/productDetail/ProductDetail";
+import LogInLayout from "./components/layouts/logIN/LogInLayout";
+
+import ResetPasswordPage from "./pages/logIn/resetPasswordPage/ResetPasswordPage";
+import LogInPage from "./pages/logIn/loginPage/LogInPage";
 
 const App = () => {
   return (
@@ -17,10 +20,14 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="products" element={<ProductsPage />} />
-          <Route path="productsDetail" element={<ProductDetail />} />
+          <Route path="products/productsDetail" element={<ProductDetail />} />
           <Route path="collections" element={<CollectionsPage />} />
-          <Route path="sale" element={<Sale />} />
           <Route path="contact" element={<ContactPage />} />
+        </Route>
+
+        <Route path="logIn" element={<LogInLayout />}>
+          <Route index element={<LogInPage />} />
+          <Route path="resetPass" element={<ResetPasswordPage />} />
         </Route>
       </Routes>
     </>

@@ -27,14 +27,14 @@
   width: 30px;
   height: 30px;
   background-color: #eae6df;
-  color: var(--Black, #2d2d2b);
+  color: #2d2d2b;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
   font-family: "Raleway";
   border-radius: 5px;
-  border: 1px solid var(--Dusty-rose, #d4c8be);
+  border: 1px solid #d4c8be;
 }
 
 .search_btn {
@@ -45,9 +45,9 @@
 }
 
 .header_title {
-  color: var(--Black, #2d2d2b);
+  color: #2d2d2b;
   text-align: center;
-  font-family: Didot;
+  font-family: "Didot";
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -78,7 +78,7 @@
 }
 
 .link {
-  color: var(--Black, #2d2d2b);
+  color: #2d2d2b;
   font-family: "Raleway";
   font-size: 16px;
   font-style: normal;

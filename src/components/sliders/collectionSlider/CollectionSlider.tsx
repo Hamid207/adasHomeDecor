@@ -7,6 +7,7 @@ import "./CollectionSilder.css";
 import { SwiperNavButtons } from "./SwiperNavButton";
 import { Link } from "react-router-dom";
 import style from "./CollectionSilder.module.css";
+import CollectionsGrid from "../../collections/collectionsGrid/CollectionsGrid";
 
 interface Test {
   name: string;
@@ -36,7 +37,10 @@ const CollectionSlider = (props: Test) => {
           spaceBetween={20}
           slidesPerView="auto"
         >
-          <SwiperSlide
+          <SwiperSlide>
+            <CollectionsGrid />
+          </SwiperSlide>
+          {/* <SwiperSlide
             className="res-slide"
             style={{ width: props.width, height: props.height }}
           >
@@ -46,7 +50,7 @@ const CollectionSlider = (props: Test) => {
             >
               <p>asdasdasd</p>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           {/* <SwiperSlide className="res-slide">
           <ProductsGrid />
