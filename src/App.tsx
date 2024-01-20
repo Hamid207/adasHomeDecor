@@ -25,9 +25,9 @@ const App = () => {
           <Route path="contact" element={<ContactPage />} />
         </Route>
 
-        <Route path="logIn" element={<LogInLayout />}>
+        <Route path="/login" element={<LogInLayout />}>
           <Route index element={<LogInPage />} />
-          <Route path="resetPass" element={<ResetPasswordPage />} />
+          <Route path="resetpass" element={<ResetPasswordPage />} />
         </Route>
       </Routes>
     </>

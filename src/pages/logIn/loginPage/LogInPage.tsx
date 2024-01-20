@@ -15,7 +15,7 @@ const LogInPage = () => {
             <img src="/public/login//Eye.png" alt="" />
           </button>
         </div>
-        <Link to="" className={style.forgot_password_link}>
+        <Link to="/resetpass" className={style.forgot_password_link}>
           Forgot password?
         </Link>
       </form>
