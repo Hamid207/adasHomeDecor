@@ -59,3 +59,28 @@
 .body > form {
   margin-bottom: 17px;
 }
+
+.register_link {
+  color: #b8926a;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.register_link_body {
+  margin-top: 70px;
+  display: flex;
+  gap: 20px;
+}
+
+.register_link_body > p {
+  color: #2d2d2b;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}

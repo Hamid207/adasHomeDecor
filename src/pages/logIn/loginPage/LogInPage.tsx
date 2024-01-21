@@ -27,6 +27,12 @@ const LogInPage = () => {
         backColor="brown"
         hidden
       />
+      <div className={style.register_link_body}>
+        <p>Don’t have an account?</p>
+        <Link to="" className={style.register_link}>
+          Register
+        </Link>
+      </div>
     </div>
   );
 };

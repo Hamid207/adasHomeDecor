@@ -1,0 +1,39 @@
+.body {
+  margin-top: 193px;
+  /* margin-left: 30px;
+      margin-right: 136px; */
+}
+
+.title {
+  margin-bottom: 50px;
+  font-family: "Didot";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+.register_link {
+  color: #b8926a;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.register_link_body {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.register_link_body > p {
+  color: #2d2d2b;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
