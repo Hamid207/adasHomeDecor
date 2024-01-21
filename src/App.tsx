@@ -13,6 +13,7 @@ import ResetPasswordPage from "./pages/logIn/resetPasswordPage/ResetPasswordPage
 import LogInPage from "./pages/logIn/loginPage/LogInPage";
 import VerificationPage from "./pages/logIn/verificationPage/VerificationPage";
 import NewPasswordPage from "./pages/logIn/newPasswordPage/NewPasswordPage";
+import RegisterPage from "./pages/logIn/registerPage/RegisterPage";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="resetpass" element={<ResetPasswordPage />} />
           <Route path="verification" element={<VerificationPage />} />
           <Route path="newpassword" element={<NewPasswordPage />} />
+          <Route path="register" element={<RegisterPage />} />
         </Route>
       </Routes>
     </>
