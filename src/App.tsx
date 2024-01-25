@@ -7,13 +7,16 @@ import ProductsPage from "./pages/products/ProductsPage";
 import CollectionsPage from "./pages/collection/CollectionsPage";
 import ContactPage from "./pages/contact/ContactPage";
 import ProductDetail from "./components/productDetail/ProductDetail";
-import LogInLayout from "./components/layouts/logIN/LogInLayout";
+import LogInLayout from "./components/layouts/logInLayout/LogInLayout";
 
 import ResetPasswordPage from "./pages/logIn/resetPasswordPage/ResetPasswordPage";
 import LogInPage from "./pages/logIn/loginPage/LogInPage";
 import VerificationPage from "./pages/logIn/verificationPage/VerificationPage";
 import NewPasswordPage from "./pages/logIn/newPasswordPage/NewPasswordPage";
 import RegisterPage from "./pages/logIn/registerPage/RegisterPage";
+import MyAccountLayout from "./components/layouts/myAccountLayout/MyAccountLayout";
+import WishlistPage from "./pages/myAcoutnPage/WishlistPage/WishlistPage";
+import PersonaInformation from "./pages/myAcoutnPage/personalInformation/PersonaInformation";
 
 const App = () => {
   return (
@@ -26,14 +29,18 @@ const App = () => {
           <Route path="products/productsDetail" element={<ProductDetail />} />
           <Route path="collections" element={<CollectionsPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="/myaccount" element={<MyAccountLayout />}>
+            <Route index element={<PersonaInformation />} />
+            <Route path="wishlist" element={<WishlistPage />} />
+          </Route>
         </Route>
 
-        <Route path="/login" element={<LogInLayout />}>
-          <Route index element={<LogInPage />} />
-          <Route path="resetpass" element={<ResetPasswordPage />} />
-          <Route path="verification" element={<VerificationPage />} />
-          <Route path="newpassword" element={<NewPasswordPage />} />
-          <Route path="register" element={<RegisterPage />} />
+        <Route element={<LogInLayout />}>
+          <Route path="/login" element={<LogInPage />} />
+          <Route path="/resetpass" element={<ResetPasswordPage />} />
+          <Route path="/verification" element={<VerificationPage />} />
+          <Route path="/newpassword" element={<NewPasswordPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Route>
       </Routes>
     </>

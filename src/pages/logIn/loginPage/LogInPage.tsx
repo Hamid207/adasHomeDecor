@@ -29,7 +29,7 @@ const LogInPage = () => {
       />
       <div className={style.register_link_body}>
         <p>Don’t have an account?</p>
-        <Link to="" className={style.register_link}>
+        <Link to="/register" className={style.register_link}>
           Register
         </Link>
       </div>
