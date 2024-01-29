@@ -1,0 +1,45 @@
+.wishlist_cart_body {
+  display: flex;
+  justify-content: space-between;
+  gap: 250px;
+}
+
+.img_title_body {
+  display: flex;
+}
+
+.img_body {
+  width: 214px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title_body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.title_body > h3 {
+  font-family: "Raleway";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.title_body > p {
+  color: #b8926a;
+  font-family: "Raleway";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.wishlist_cart_body > button {
+  width: 24px;
+  height: 24px;
+  background-color: #eae6df;
+}

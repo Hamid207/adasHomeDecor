@@ -1,8 +1,10 @@
 import style from "./MyAccountLayout.module.css";
 import "../../../assets/Container.css";
-import { Link, Outlet } from "react-router-dom";
-import CustomInput from "../../ui/customInput/CustomInput";
-import CustomLink from "../../ui/customLink/CustomLink";
+import { Link, NavLink, Outlet } from "react-router-dom";
+
+const aa = () => {
+  console.log("testtttt");
+};
 
 const MyAccountLayout = () => {
   return (
@@ -16,7 +18,7 @@ const MyAccountLayout = () => {
       <div className={style.account_body}>
         <div className={style.left_body}>
           <p>MY ACCOUNT</p>
-          <Link to="/myaccount">
+          <NavLink to="/myaccount">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -28,8 +30,8 @@ const MyAccountLayout = () => {
               <ellipse cx="12" cy="17" rx="7" ry="4" fill="#2D2D2B" />
             </svg>
             PERSONAL INFORMATION
-          </Link>
-          <Link to="wishlist">
+          </NavLink>
+          <NavLink to="wishlist" onClick={aa}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -43,7 +45,7 @@ const MyAccountLayout = () => {
               />
             </svg>
             WISHLIST
-          </Link>
+          </NavLink>
           <Link to="" className={style.logout}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
