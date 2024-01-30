@@ -39,7 +39,7 @@ const Header = () => {
             <p className={style.header_title}>HomeDecor</p>
           </div>
           <div className={style.header_right}>
-            <Link to="/" className={style.shop_user_button}>
+            <Link to="/shoppingcart" className={style.shop_user_button}>
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>
             <Link to="/logIn" className={style.shop_user_button}>
