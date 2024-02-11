@@ -27,8 +27,6 @@ interface MainChildren {
   children: React.ReactNode;
   name: string;
   isHidden: boolean;
-  width: string;
-  height: string;
   seeAllIshidden: boolean;
 }
 
@@ -37,12 +35,11 @@ const CollectionSlider = ({
   name,
   isHidden,
   seeAllIshidden,
-  width,
-  height,
 }: MainChildren) => {
   return (
     <section>
       <div className="App">
+        <h2 className={style.title}>{name}</h2>
         <div
           style={{
             textAlign: "right",
@@ -50,7 +47,6 @@ const CollectionSlider = ({
           }}
           className={style.title_body}
         >
-          <h2 className={style.title}>{name}</h2>
           <Link to="/" className={style.see_all}>
             SEE ALL
           </Link>

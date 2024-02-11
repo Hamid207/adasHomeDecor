@@ -6,3 +6,9 @@ export const CategoriesService = {
     return responce.data;
   },
 };
+
+export interface Categorie {
+  id: number;
+  catTitle: string;
+  image: string;
+}

@@ -6,3 +6,14 @@ export const ProductsService = {
     return responce.data;
   },
 };
+
+export interface Product {
+  id: number;
+  collectionId: number;
+  categoriesId: number;
+  image: string;
+  title: string;
+  desc: string;
+  price: string;
+  views: number;
+}

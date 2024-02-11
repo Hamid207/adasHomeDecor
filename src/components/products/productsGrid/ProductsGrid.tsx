@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom";
 import style from "./ProductsGrid.module.css";
 
-const ProductsGrid = () => {
+interface ProductCard {
+  name: string;
+  width: string;
+  height: string;
+  img: string;
+}
+
+const ProductsGrid = (props: ProductCard) => {
   return (
     <div>
       <Link to="/products/productsDetail" className={style.link}>
         <div
           className={style.back_img_body}
-          style={{ backgroundImage: `url("/public/main/sofa.png")` }}
+          style={{
+            backgroundImage: `url(${props.img})`,
+            width: props.width,
+            height: props.height,
+          }}
         >
           <button className={style.like_button}>
             <div className={style.img_body}>

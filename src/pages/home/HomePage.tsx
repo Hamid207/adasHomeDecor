@@ -11,28 +11,19 @@ import ProductsGrid from "../../components/products/productsGrid/ProductsGrid";
 import "../../components/sliders/collectionSlider/CollectionSilder.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
-
-interface Categorie {
-  id: number;
-  catTitle: string;
-  image: string;
-}
+import { Categorie } from "../../services/categories.service";
+import { Product } from "../../services/products.service";
 
 const HomePage = () => {
   const categories = useSelector((state: RootState) => state.categories);
+  const products = useSelector((state: RootState) => state.productts);
   return (
     <>
       <MainImageAndText />
-      <CollectionSlider
-        name=""
-        isHidden={false}
-        height="190px"
-        width="330px"
-        seeAllIshidden={true}
-      >
+      <CollectionSlider name="" isHidden={false} seeAllIshidden={true}>
         {categories.map((categorie: Categorie) => {
           return (
-            <SwiperSlide className="res-slide">
+            <SwiperSlide key={categorie.id} className="res-slide">
               <CollectionsGrid
                 name={categorie.catTitle}
                 height="195px"
@@ -47,26 +38,44 @@ const HomePage = () => {
       <AboutUs pageName="home" />
       <Discount />
       <Products />
-      {/* <CollectionSlider
+      <CollectionSlider
         name="MOST POPULAR"
         isHidden={false}
-        width="330px"
-        height="195px"
-        // type={Slider.products}
+        seeAllIshidden={true}
       >
-        <SwiperSlide>
-          <ProductsGrid />
-        </SwiperSlide>
-
-      </CollectionSlider> */}
-
-      {/* <CollectionSlider
-        name="COLLECTIONS"
+        {products
+          .filter((product: Product) => product.views > 80)
+          .map((product: Product) => {
+            return (
+              <SwiperSlide key={product.id} className="res-slide">
+                <ProductsGrid
+                  name={product.title}
+                  height="267px"
+                  width="330px"
+                  img={product.image}
+                />
+              </SwiperSlide>
+            );
+          })}
+      </CollectionSlider>
+      <CollectionSlider
+        name="MOST POPULAR"
         isHidden={false}
-        width="330px"
-        height="195px"
-        // type={Slider.collection}
-      /> */}
+        seeAllIshidden={true}
+      >
+        {products.map((product: Product) => {
+          return (
+            <SwiperSlide key={product.id} className="res-slide">
+              <ProductsGrid
+                name={product.title}
+                height="267px"
+                width="330px"
+                img={product.image}
+              />
+            </SwiperSlide>
+          );
+        })}
+      </CollectionSlider>
       <Contact pageName="home" />
     </>
   );
