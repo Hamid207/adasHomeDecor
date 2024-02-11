@@ -8,54 +8,60 @@ import { SwiperNavButtons } from "./SwiperNavButton";
 import { Link } from "react-router-dom";
 import style from "./CollectionSilder.module.css";
 import CollectionsGrid from "../../collections/collectionsGrid/CollectionsGrid";
+import ProductsGrid from "../../products/productsGrid/ProductsGrid";
 
-interface Test {
+// interface MySlider {
+//   name: string;
+//   isHidden: boolean;
+//   width: string;
+//   height: string;
+// }
+
+// export enum Slider {
+//   collection,
+//   products,
+//   categories,
+// }
+
+interface MainChildren {
+  children: React.ReactNode;
   name: string;
   isHidden: boolean;
   width: string;
   height: string;
+  seeAllIshidden: boolean;
 }
 
-const CollectionSlider = (props: Test) => {
+const CollectionSlider = ({
+  children,
+  name,
+  isHidden,
+  seeAllIshidden,
+  width,
+  height,
+}: MainChildren) => {
   return (
     <section>
       <div className="App">
         <div
           style={{
-            textAlign: "left",
-            display: props.isHidden ? "none" : "block",
+            textAlign: "right",
+            display: seeAllIshidden ? "none" : "block",
           }}
           className={style.title_body}
         >
-          <h2 className={style.title}>{props.name}</h2>
+          <h2 className={style.title}>{name}</h2>
           <Link to="/" className={style.see_all}>
             SEE ALL
           </Link>
         </div>
         <Swiper
           modules={[Navigation, Pagination, A11y]}
-          spaceBetween={20}
+          spaceBetween={10}
           slidesPerView="auto"
         >
-          <SwiperSlide>
-            <CollectionsGrid />
-          </SwiperSlide>
-          {/* <SwiperSlide
-            className="res-slide"
-            style={{ width: props.width, height: props.height }}
-          >
-            <div
-              style={{ display: props.isHidden ? "none" : "block" }}
-              className="blur"
-            >
-              <p>asdasdasd</p>
-            </div>
-          </SwiperSlide> */}
-
-          {/* <SwiperSlide className="res-slide">
-          <ProductsGrid />
-        </SwiperSlide> */}
-          <SwiperNavButtons isHidden={props.isHidden} />
+          <div>{children}</div>
+          <SwiperNavButtons isHidden={isHidden} />
         </Swiper>
       </div>
     </section>

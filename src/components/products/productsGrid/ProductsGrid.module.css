@@ -38,6 +38,7 @@
 }
 
 .text {
+  text-align: left;
   font-family: "Raleway";
   font-size: 20px;
   font-style: normal;
@@ -47,9 +48,12 @@
   margin-right: 10px;
   margin-top: 22px;
   text-decoration: none;
+  width: 330px;
+  border: 2px solid red;
 }
 
 .price {
+  text-align: left;
   text-decoration: none;
   color: #b8926a;
   font-family: "Raleway";
@@ -59,4 +63,5 @@
   line-height: 28px;
   margin-top: 22px;
   margin-bottom: 44px;
+  width: 330px;
 }

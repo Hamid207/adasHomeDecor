@@ -1,11 +1,12 @@
 .body {
-  width: 430px;
-  height: 267px;
+  /* width: 430px;
+  height: 267px; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
   overflow: hidden;
+  background-color: red;
 }
 
 .link {
@@ -36,4 +37,10 @@
   height: 55px;
   text-align: center;
   backdrop-filter: blur(10px);
+}
+
+.blur > p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }

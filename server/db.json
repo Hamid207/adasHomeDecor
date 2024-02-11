@@ -630,32 +630,32 @@
   "categories": [
     {
       "id": 1,
-      "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle109.png",
       "catTitle": "SOFAS"
     },
     {
       "id": 2,
-      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle110.png",
       "catTitle": "BEDS AND HEADBOARDS"
     },
     {
       "id": 3,
-      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle111.png",
       "catTitle": "RUGS"
     },
     {
       "id": 4,
-      "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle112.png",
       "catTitle": "CUSHIONS"
     },
     {
       "id": 5,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle111.png",
       "catTitle": "ARMCHAIRS"
     },
     {
       "id": 6,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle109.png",
       "catTitle": "HEADBOARDS"
     }
   ],
