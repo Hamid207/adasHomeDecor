@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import ProductsGrid from "../products/productsGrid/ProductsGrid";
 import CustomLink from "../ui/customLink/CustomLink";
 import ProductsList from "../ui/productsList/ProductsList";
 import style from "./ProductsMain.module.css";
+import { RootState } from "../../store/Store";
+import { Product } from "../../services/products.service";
 
 const ProductsMain = () => {
+  const products = useSelector((state: RootState) => state.productts);
   return (
     <section>
       <div className={style.body}>
@@ -62,13 +66,17 @@ const ProductsMain = () => {
             />
           </div>
           <div className={style.productsBody}>
-            <ProductsGrid />
-            <ProductsGrid />
-            <ProductsGrid />
-            <ProductsGrid />
-            <ProductsGrid />
-            <ProductsGrid />
-            <ProductsGrid />
+            {products.map((products: Product) => {
+              return (
+                <ProductsGrid
+                  key={products.id}
+                  name={products.title}
+                  width="330px"
+                  height="267px"
+                  img={products.image}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

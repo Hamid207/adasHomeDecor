@@ -28,6 +28,7 @@ const Collections = () => {
           {collections.map((collections: Collection) => {
             return (
               <CollectionsGrid
+                key={collections.id}
                 name={collections.colTitle}
                 width="447px"
                 height="267px"
