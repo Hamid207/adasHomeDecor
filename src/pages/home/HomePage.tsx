@@ -13,17 +13,23 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
 import { Categorie } from "../../services/categories.service";
 import { Product } from "../../services/products.service";
+import { Collection } from "../../services/collections.service";
 
 const HomePage = () => {
   const categories = useSelector((state: RootState) => state.categories);
   const products = useSelector((state: RootState) => state.productts);
+  const collections = useSelector((state: RootState) => state.collections);
   return (
     <>
       <MainImageAndText />
       <CollectionSlider name="" isHidden={false} seeAllIshidden={true}>
         {categories.map((categorie: Categorie) => {
           return (
-            <SwiperSlide key={categorie.id} className="res-slide">
+            <SwiperSlide
+              key={categorie.id}
+              className="res-slide"
+              style={{ maxWidth: "330px" }}
+            >
               <CollectionsGrid
                 name={categorie.catTitle}
                 height="195px"
@@ -47,7 +53,11 @@ const HomePage = () => {
           .filter((product: Product) => product.views > 80)
           .map((product: Product) => {
             return (
-              <SwiperSlide key={product.id} className="res-slide">
+              <SwiperSlide
+                key={product.id}
+                className="res-slide"
+                style={{ maxWidth: "330px" }}
+              >
                 <ProductsGrid
                   name={product.title}
                   height="267px"
@@ -59,18 +69,23 @@ const HomePage = () => {
           })}
       </CollectionSlider>
       <CollectionSlider
-        name="MOST POPULAR"
+        name="COLLECTIONS"
         isHidden={false}
         seeAllIshidden={true}
       >
-        {products.map((product: Product) => {
+        {collections.map((collection: Collection) => {
           return (
-            <SwiperSlide key={product.id} className="res-slide">
-              <ProductsGrid
-                name={product.title}
+            <SwiperSlide
+              key={collection.id}
+              className="res-slide"
+              style={{ maxWidth: "440px" }}
+            >
+              <CollectionsGrid
+                name={collection.colTitle}
                 height="267px"
-                width="330px"
-                img={product.image}
+                width="700px"
+                isHidden
+                img={collection.image}
               />
             </SwiperSlide>
           );

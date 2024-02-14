@@ -7,8 +7,6 @@ import "./CollectionSilder.css";
 import { SwiperNavButtons } from "./SwiperNavButton";
 import { Link } from "react-router-dom";
 import style from "./CollectionSilder.module.css";
-import CollectionsGrid from "../../collections/collectionsGrid/CollectionsGrid";
-import ProductsGrid from "../../products/productsGrid/ProductsGrid";
 
 // interface MySlider {
 //   name: string;
