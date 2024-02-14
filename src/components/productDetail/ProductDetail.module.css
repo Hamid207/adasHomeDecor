@@ -48,7 +48,7 @@
   overflow: hidden;
   width: 70%;
 
-  /* max-height: 403px; */
+  max-height: 403px;
 }
 
 .product_info {
@@ -136,4 +136,27 @@
 
 .slider_body {
   margin: 120px 30px 30px 30px;
+}
+
+.color_button {
+  display: flex;
+  gap: 5px;
+}
+
+.color_button > button {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+}
+
+.color_button :nth-child(1) {
+  background-color: #539991;
+  border: 1px red solid;
+}
+
+.color_button :nth-child(2) {
+  background-color: #555555;
+}
+.color_button :nth-child(3) {
+  background-color: chocolate;
 }

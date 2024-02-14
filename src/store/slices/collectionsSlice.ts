@@ -12,8 +12,6 @@ const collectionsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchCollections.fulfilled, (state, action) => {
-      console.log(action);
-
       return action.payload;
     });
   },

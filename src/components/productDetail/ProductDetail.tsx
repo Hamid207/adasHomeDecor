@@ -1,8 +1,34 @@
+import { useEffect, useState } from "react";
 import CollectionSlider from "../sliders/collectionSlider/CollectionSlider";
 import CustomLink from "../ui/customLink/CustomLink";
 import style from "./ProductDetail.module.css";
+import { Product, ProductsService } from "../../services/products.service";
+import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
+  const { id } = useParams() as { id: string };
+
+  const [detail, setDetail] = useState<Product>({
+    id: 0,
+    collectionId: 0,
+    categoriesId: 0,
+    image: "",
+    title: "",
+    desc: "",
+    price: "",
+    views: 0,
+  });
+
+  useEffect(() => {
+    if (!id) return;
+    const fetchData = async () => {
+      const data = await ProductsService.getById(id);
+      setDetail(data);
+    };
+
+    fetchData();
+  }, [id]);
+
   window.scrollTo(0, 0);
   return (
     <>
@@ -11,37 +37,33 @@ const ProductDetail = () => {
           <ul>
             <li>Home</li>
             <li>Products</li>
-            <li>Grayson Premium Grey Wash Nest of Tables</li>
+            <li>{detail.title}</li>
           </ul>
         </div>
         <div className={style.deail_body}>
           <div className={style.img_body}>
             <div>
-              <img src="/public/main/sofa.png" alt="" />
+              {/* <img src="/public/main/sofa.png" alt="" /> */}
+              <img src={detail.image} alt="" />
             </div>
 
-            <CollectionSlider
-              name=""
-              isHidden={true}
-              height="100px"
-              width="194px"
-            />
+            <CollectionSlider name="" isHidden={true} children seeAllIshidden />
           </div>
           <div className={style.product_info}>
-            <h2>GRAYSON PREMIUM GREY WASH NEST OF TABLES</h2>
-            <p className={style.main_info}>
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-              molestiae non recusandae.
-            </p>
+            <h2>{detail.title}</h2>
+            <p className={style.main_info}>{detail.desc}</p>
             <p className={style.colors_text}>COLORS</p>
-
+            <div className={style.color_button}>
+              <button></button>
+              <button></button>
+              <button></button>
+            </div>
             <div className={style.product_count}>
               <button>+</button>
               <p>0</p>
               <button>-</button>
             </div>
-            <h3 className={style.price}>140$</h3>
+            <h3 className={style.price}>{detail.price}$</h3>
             <div className={style.buttons_body}>
               <CustomLink
                 to=""
@@ -49,7 +71,7 @@ const ProductDetail = () => {
                 width="330px"
                 height="54px"
                 backColor="brown"
-                hidden={false}
+                hidden={true}
               />
               <CustomLink
                 to=""
@@ -57,18 +79,13 @@ const ProductDetail = () => {
                 width="330px"
                 height="54px"
                 backColor="none"
-                hidden={false}
+                hidden={true}
               />
             </div>
           </div>
         </div>
         <div className={style.slider_body}>
-          <CollectionSlider
-            name="SIMILAR PRODUCTS"
-            isHidden={false}
-            height="267px"
-            width="330px"
-          />
+          <CollectionSlider name="" isHidden={true} children seeAllIshidden />
         </div>
       </section>
       <section>

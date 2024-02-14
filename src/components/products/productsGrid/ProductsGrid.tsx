@@ -6,12 +6,14 @@ interface ProductCard {
   width: string;
   height: string;
   img: string;
+  price: string;
+  id: number;
 }
 
 const ProductsGrid = (props: ProductCard) => {
   return (
     <div>
-      <Link to="/products/productsDetail" className={style.link}>
+      <Link to={`/products/productsDetail/${props.id}`} className={style.link}>
         <div
           className={style.back_img_body}
           style={{
@@ -26,8 +28,8 @@ const ProductsGrid = (props: ProductCard) => {
             </div>
           </button>
         </div>
-        <p className={style.text}>Grayson Premium Grey Wash Nest of Tables</p>
-        <p className={style.price}>140$</p>
+        <p className={style.text}>{props.name}</p>
+        <p className={style.price}>{props.price} $</p>
       </Link>
     </div>
   );

@@ -63,6 +63,8 @@ const HomePage = () => {
                   height="267px"
                   width="330px"
                   img={product.image}
+                  price={product.price}
+                  id={product.id}
                 />
               </SwiperSlide>
             );

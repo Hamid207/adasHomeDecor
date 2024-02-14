@@ -8,6 +8,7 @@ import { Product } from "../../services/products.service";
 
 const ProductsMain = () => {
   const products = useSelector((state: RootState) => state.productts);
+
   return (
     <section>
       <div className={style.body}>
@@ -74,6 +75,8 @@ const ProductsMain = () => {
                   width="330px"
                   height="267px"
                   img={products.image}
+                  price={products.price}
+                  id={products.id}
                 />
               );
             })}

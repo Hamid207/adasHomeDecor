@@ -5,6 +5,11 @@ export const ProductsService = {
     const responce = await axios.get("http://localhost:3001/products");
     return responce.data;
   },
+
+  async getById(id: string) {
+    const responce = await axios.get(`http://localhost:3001/products?id=${id}`);
+    return responce.data[0];
+  },
 };
 
 export interface Product {
