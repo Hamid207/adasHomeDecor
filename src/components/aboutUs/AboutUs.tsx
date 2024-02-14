@@ -1,11 +1,27 @@
 import style from "./AboutUs.module.css";
 import CustomLink from "../ui/customLink/CustomLink";
+import { useEffect, useState } from "react";
+import { AboutModel, AboutService } from "../../services/about.service";
 
 interface Page {
   pageName: string;
 }
 
 const AboutUs = (props: Page) => {
+  const [about, setAbout] = useState<AboutModel>({
+    image: "",
+    desc: "",
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await AboutService.getAbout();
+      setAbout(data);
+    };
+
+    fetchData();
+  }, []);
+
   let isHiden: boolean = true;
   switch (true) {
     case props.pageName == "about":
@@ -34,6 +50,7 @@ const AboutUs = (props: Page) => {
             <div className={style.img_body}>
               <img
                 src="/public/main/aboutUs.png"
+                // src={about.image}
                 alt=""
                 className={style.img}
               />

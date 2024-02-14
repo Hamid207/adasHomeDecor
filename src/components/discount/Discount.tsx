@@ -1,17 +1,33 @@
 import style from "./Discount.module.css";
 import CustomLink from "../ui/customLink/CustomLink";
+import { useEffect, useState } from "react";
+import {
+  DiscountModel,
+  DiscountService,
+} from "../../services/discount.service";
 
 const Discount = () => {
+  const [discount, setDiscount] = useState<DiscountModel>({
+    sale: "",
+    image: "",
+    desc: "",
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await DiscountService.getDiscount();
+      setDiscount(data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <section>
       <div className={style.body}>
-        <p>20% DISCOUNT</p>
+        <p>{discount.sale} DISCOUNT</p>
         <div className={style.text_body}>
-          <p>
-            Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-            tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-            quo
-          </p>
+          <p>{discount.desc}</p>
         </div>
 
         <CustomLink
