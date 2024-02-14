@@ -1,7 +1,12 @@
+import { useSelector } from "react-redux";
 import style from "./Collections.module.css";
 import CollectionsGrid from "./collectionsGrid/CollectionsGrid";
+import { RootState } from "../../store/Store";
+import { Collection } from "../../services/collections.service";
 
 const Collections = () => {
+  const collections = useSelector((state: RootState) => state.collections);
+
   return (
     <section>
       <div className={style.body}>
@@ -20,15 +25,17 @@ const Collections = () => {
           </p>
         </div>
         <div className={style.grid_body}>
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
-          <CollectionsGrid />
+          {collections.map((collections: Collection) => {
+            return (
+              <CollectionsGrid
+                name={collections.colTitle}
+                width="447px"
+                height="267px"
+                isHidden
+                img={collections.image}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
