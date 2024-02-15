@@ -26,6 +26,9 @@ interface MainChildren {
   name: string;
   isHidden: boolean;
   seeAllIshidden: boolean;
+  marginTop: string;
+  backColor: string;
+  height: string;
 }
 
 const CollectionSlider = ({
@@ -33,10 +36,20 @@ const CollectionSlider = ({
   name,
   isHidden,
   seeAllIshidden,
+  marginTop,
+  backColor,
+  height,
 }: MainChildren) => {
   return (
     <section>
-      <div className="App">
+      <div
+        className="App"
+        style={{
+          marginTop: marginTop,
+          height: height,
+          backgroundColor: backColor,
+        }}
+      >
         <h2 className={style.title}>{name}</h2>
         <div
           style={{
@@ -45,7 +58,7 @@ const CollectionSlider = ({
           }}
           className={style.title_body}
         >
-          <Link to="/" className={style.see_all}>
+          <Link to="/collections" className={style.see_all}>
             SEE ALL
           </Link>
         </div>

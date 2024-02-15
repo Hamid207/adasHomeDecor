@@ -4,7 +4,6 @@ import style from "./Products.module.css";
 import { useSelector } from "react-redux";
 
 import { RootState } from "../../store/Store";
-import { Categorie } from "../../services/categories.service";
 import { Product } from "../../services/products.service";
 
 const Products = () => {
@@ -15,7 +14,7 @@ const Products = () => {
       <div className={style.body}>
         <div className={style.title_body}>
           <h2>PRODUCTS</h2>
-          <Link to="/" className={style.see_all}>
+          <Link to="/products" className={style.see_all}>
             SEE ALL
           </Link>
         </div>

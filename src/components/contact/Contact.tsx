@@ -3,6 +3,7 @@ import CustomLink from "../ui/customLink/CustomLink";
 
 interface Page {
   pageName: string;
+  marginTop: string;
 }
 
 const Contact = (props: Page) => {
@@ -24,7 +25,9 @@ const Contact = (props: Page) => {
           <li>About</li>
         </ul>
       </div>
-      <p className={style.title}>CONTACT</p>
+      <p className={style.title} style={{ marginTop: props.marginTop }}>
+        CONTACT
+      </p>
       <div className={style.body}>
         <div>
           <form action="" className={style.form}>

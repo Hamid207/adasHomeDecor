@@ -1,35 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Nova+Square&family=Raleway&family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Raleway&family=Rubik&display=swap");
 
+.mian_body {
+  position: relative;
+  max-width: 330px;
+}
+
 .link {
   text-decoration: none;
   color: #2d2d2b;
 }
 
-.back_img_body {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 267px;
-  width: 330px; */
-  display: flex;
-  justify-content: right;
+.mainImage_likeImage_body {
+  max-width: 330px;
+  max-height: 300px;
+  text-align: right;
+}
+
+.main_image_body {
+  height: 267px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .like_button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin-right: 15px;
+  /* z-index: 1; */
   width: 46px;
   height: 38px;
   border-radius: 5px;
-  margin: 15px;
-}
-
-.img_body {
-  width: 46px;
-  height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
 }
 
 .img {

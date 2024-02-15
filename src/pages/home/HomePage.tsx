@@ -22,7 +22,14 @@ const HomePage = () => {
   return (
     <>
       <MainImageAndText />
-      <CollectionSlider name="" isHidden={false} seeAllIshidden={true}>
+      <CollectionSlider
+        name=""
+        isHidden={false}
+        seeAllIshidden={true}
+        marginTop="-120px"
+        backColor=""
+        height=""
+      >
         {categories.map((categorie: Categorie) => {
           return (
             <SwiperSlide
@@ -48,6 +55,9 @@ const HomePage = () => {
         name="MOST POPULAR"
         isHidden={false}
         seeAllIshidden={true}
+        marginTop=""
+        backColor=""
+        height=""
       >
         {products
           .filter((product: Product) => product.views > 80)
@@ -73,7 +83,10 @@ const HomePage = () => {
       <CollectionSlider
         name="COLLECTIONS"
         isHidden={false}
-        seeAllIshidden={true}
+        seeAllIshidden={false}
+        marginTop="100px"
+        height="500px"
+        backColor=""
       >
         {collections.map((collection: Collection) => {
           return (
@@ -93,7 +106,7 @@ const HomePage = () => {
           );
         })}
       </CollectionSlider>
-      <Contact pageName="home" />
+      <Contact pageName="home" marginTop="120px" />
     </>
   );
 };

@@ -3,7 +3,9 @@
 .headerMain {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  /* padding: 30px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header_left {
@@ -99,4 +101,8 @@
   stroke-width: 1px;
   border-bottom: 1px black solid;
   padding-bottom: 10px;
+}
+
+.home_link {
+  text-decoration: none;
 }

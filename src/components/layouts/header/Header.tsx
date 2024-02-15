@@ -36,7 +36,9 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <p className={style.header_title}>HomeDecor</p>
+            <Link to="/" className={style.home_link}>
+              <p className={style.header_title}>HomeDecor</p>
+            </Link>
           </div>
           <div className={style.header_right}>
             <Link to="/shoppingcart" className={style.shop_user_button}>

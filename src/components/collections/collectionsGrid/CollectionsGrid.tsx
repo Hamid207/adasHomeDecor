@@ -15,7 +15,6 @@ const CollectionsGrid = (props: ColletionCardSize) => {
       style={{
         // backgroundImage: `url("/public/main/collections/col1.png")`,
         backgroundImage: `url(${props.img})`,
-
         width: props.width,
         height: props.height,
       }}
