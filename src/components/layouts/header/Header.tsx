@@ -1,6 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import "../../../assets/Container.css";
 import style from "./Header.module.css";
+import { useState } from "react";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
@@ -19,6 +20,12 @@ const setActive = ({ isActive }: { isActive: boolean }) =>
     : { color: "#2D2D2B" };
 
 const Header = () => {
+  const [userLogin, setUserLogin] = useState<boolean>(false);
+
+  const test = () => {
+    setUserLogin(!userLogin);
+  };
+
   return (
     <header className="container">
       <nav>
@@ -44,9 +51,31 @@ const Header = () => {
             <Link to="/shoppingcart" className={style.shop_user_button}>
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>
-            <Link to="/logIn" className={style.shop_user_button}>
-              <img src="/public/header/user.png" alt="" className={style.img} />
-            </Link>
+            {(userLogin && (
+              <Link
+                onClick={test}
+                to="/login"
+                className={style.shop_user_button}
+              >
+                <img
+                  src="/public/header/user.png"
+                  alt=""
+                  className={style.img}
+                />
+              </Link>
+            )) || (
+              <Link
+                onClick={test}
+                to="/myaccount"
+                className={style.shop_user_button}
+              >
+                <img
+                  src="/public/header/user.png"
+                  alt=""
+                  className={style.img}
+                />
+              </Link>
+            )}
           </div>
         </div>
         <div className={style.header_nav}>

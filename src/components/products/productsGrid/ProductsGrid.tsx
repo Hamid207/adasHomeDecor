@@ -14,21 +14,9 @@ interface ProductCard {
 const ProductsGrid = (props: ProductCard) => {
   const [likeBtn, setLikeBtn] = useState<boolean>(false);
 
-  var likeBtnImg = "/public/main/like.png";
-
   const togle = () => {
     setLikeBtn(!likeBtn);
   };
-
-  useEffect(() => {
-    if (likeBtn == false) {
-      likeBtnImg = "/public/main/like.png";
-    } else {
-      console.log(likeBtn);
-
-      likeBtnImg = "/public/main/heart.png";
-    }
-  }, [likeBtn]);
 
   return (
     <div className={style.mian_body}>
