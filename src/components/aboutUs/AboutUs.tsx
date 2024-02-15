@@ -31,6 +31,7 @@ const AboutUs = (props: Page) => {
       isHiden = true;
       break;
   }
+  window.scrollTo(0, 0);
 
   return (
     <>
@@ -75,7 +76,7 @@ const AboutUs = (props: Page) => {
                 perferendis doloribus asperiores repellat.
               </p>
               <CustomLink
-                to="/"
+                to="/about"
                 text="LEARN MORE"
                 width="330px"
                 height="54px"

@@ -6,6 +6,7 @@ import { Collection } from "../../services/collections.service";
 
 const Collections = () => {
   const collections = useSelector((state: RootState) => state.collections);
+  window.scrollTo(0, 0);
 
   return (
     <section>

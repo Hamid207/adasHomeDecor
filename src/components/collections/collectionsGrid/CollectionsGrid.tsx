@@ -21,7 +21,7 @@ const CollectionsGrid = (props: ColletionCardSize) => {
       }}
       className={style.body}
     >
-      <Link to="/collections" className={style.link}>
+      <Link to="/products" className={style.link}>
         <div className={style.blur}>
           <p>{props.name}</p>
         </div>

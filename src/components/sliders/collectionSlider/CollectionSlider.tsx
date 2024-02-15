@@ -51,7 +51,7 @@ const CollectionSlider = ({
         </div>
         <Swiper
           modules={[Navigation, Pagination, A11y]}
-          spaceBetween={10}
+          spaceBetween={20}
           slidesPerView="auto"
         >
           <div>{children}</div>

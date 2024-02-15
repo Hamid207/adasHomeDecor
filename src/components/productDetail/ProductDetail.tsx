@@ -4,8 +4,14 @@ import CustomLink from "../ui/customLink/CustomLink";
 import style from "./ProductDetail.module.css";
 import { Product, ProductsService } from "../../services/products.service";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/Store";
+import { SwiperSlide } from "swiper/react";
+import ProductsGrid from "../products/productsGrid/ProductsGrid";
 
 const ProductDetail = () => {
+  const products = useSelector((state: RootState) => state.productts);
+
   const { id } = useParams() as { id: string };
 
   const [detail, setDetail] = useState<Product>({
@@ -41,14 +47,35 @@ const ProductDetail = () => {
           </ul>
         </div>
         <div className={style.deail_body}>
-          <div className={style.img_body}>
-            <div>
-              {/* <img src="/public/main/sofa.png" alt="" /> */}
-              <img src={detail.image} alt="" />
+          <div className={style.images_body}>
+            <div className={style.img_body}>
+              <div>
+                {/* <img src="/public/main/sofa.png" alt="" /> */}
+                <img src={detail.image} alt="" />
+              </div>
             </div>
-
-            <CollectionSlider name="" isHidden={true} children seeAllIshidden />
+            <div className={style.mini_slider}>
+              <CollectionSlider name="" isHidden={true} seeAllIshidden>
+                {products
+                  .filter((product: Product) => product.id < 4)
+                  .map((product: Product) => {
+                    return (
+                      <SwiperSlide
+                        key={product.id}
+                        className="res-slide"
+                        style={{ maxWidth: "195px" }}
+                      >
+                        <div className={style.images}>
+                          <img src={product.image} alt="" />
+                          <p>1212122</p>
+                        </div>
+                      </SwiperSlide>
+                    );
+                  })}
+              </CollectionSlider>
+            </div>
           </div>
+
           <div className={style.product_info}>
             <h2>{detail.title}</h2>
             <p className={style.main_info}>{detail.desc}</p>
@@ -85,7 +112,30 @@ const ProductDetail = () => {
           </div>
         </div>
         <div className={style.slider_body}>
-          <CollectionSlider name="" isHidden={true} children seeAllIshidden />
+          <CollectionSlider
+            name="SIMILAR PRODUCTS"
+            isHidden={true}
+            seeAllIshidden
+          >
+            {products.map((product: Product) => {
+              return (
+                <SwiperSlide
+                  key={product.id}
+                  className="res-slide"
+                  style={{ maxWidth: "330px" }}
+                >
+                  <ProductsGrid
+                    name={product.title}
+                    height="267px"
+                    width="330px"
+                    img={product.image}
+                    price={product.price}
+                    id={product.id}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </CollectionSlider>
         </div>
       </section>
       <section>

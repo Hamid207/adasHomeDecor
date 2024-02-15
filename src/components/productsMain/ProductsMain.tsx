@@ -8,6 +8,7 @@ import { Product } from "../../services/products.service";
 
 const ProductsMain = () => {
   const products = useSelector((state: RootState) => state.productts);
+  window.scrollTo(0, 0);
 
   return (
     <section>

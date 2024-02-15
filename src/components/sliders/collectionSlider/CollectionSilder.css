@@ -11,7 +11,8 @@
 }
 
 .swiper {
-  padding: 2rem;
+  /* padding: 2rem; */
+  padding-top: 2rem;
 }
 
 .swiper .res-slide {
