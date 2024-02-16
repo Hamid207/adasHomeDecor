@@ -1,0 +1,14 @@
+.loginInput {
+  height: 54px;
+  border-radius: 10px;
+  border: 1px solid #d4c8be;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 20px;
+  background-color: #eae6df;
+  margin-bottom: 15px;
+  width: 437px;
+}

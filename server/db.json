@@ -684,43 +684,15 @@
       "id": "1",
       "fullname": "Kamran Asgarov",
       "email": "kamranasgar0@gmail.com",
-      "password": "987654321"
+      "password": "987654321",
+      "userToken": "123321123321213123123"
     },
     {
-      "id": 1690893873025,
-      "fullname": "Kanan Baba",
-      "email": "kananbaba7@gmail.com",
-      "password": "123456789"
-    },
-    {
-      "id": 1690894235994,
-      "fullname": "test test",
-      "email": "test@gmail.com",
-      "password": "test123"
-    },
-    {
-      "id": 1691136044651,
-      "fullname": "Murad Asgar",
-      "email": "test1@mail.com",
-      "password": "123"
-    },
-    {
-      "id": 1691136347679,
-      "fullname": "test testli",
-      "email": "test@mail.ru",
-      "password": "321"
-    },
-    {
-      "id": 1692101922443,
-      "fullname": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": 1692101953503,
-      "fullname": "     ",
-      "email": "",
-      "password": "         "
+      "id": "2",
+      "fullname": "Hamid Manafov",
+      "email": "hamidmanafov@gmail.com",
+      "password": "hamid",
+      "userToken": "123213213414324324235235"
     }
   ],
   "favorites": [

@@ -1,7 +1,8 @@
 import { NavLink, Link } from "react-router-dom";
 import "../../../assets/Container.css";
 import style from "./Header.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
@@ -21,10 +22,45 @@ const setActive = ({ isActive }: { isActive: boolean }) =>
 
 const Header = () => {
   const [userLogin, setUserLogin] = useState<boolean>(false);
+  const [link, setLink] = useState<string>("");
 
-  const test = () => {
-    setUserLogin(!userLogin);
+  const [token, setToken] = useLocalStorage("userTokenNull", "userToken");
+  var loginOrAcount = "";
+
+  const chekUser = () => {
+    // setUserLogin(!userLogin);
+    // setToken("TOKEN123456789");
+
+    if (token == "userTokenNull") {
+      console.log(token);
+      loginOrAcount = "/login";
+      setLink("/login");
+      setUserLogin(false);
+    } else {
+      console.log(token);
+
+      setUserLogin(true);
+      setLink("/myaccount");
+      loginOrAcount = "/myaccount";
+    }
+
+    // if (userLogin == false) {
+    //   loginOrAcount = false;
+    // } else if (userLogin == true) {
+    //   loginOrAcount = true;
+    // }
+    console.log("TAP");
+    console.log(loginOrAcount);
   };
+
+  useEffect(() => {
+    if (userLogin == false) {
+      // loginOrAcount = false;
+    } else if (userLogin == true) {
+      // loginOrAcount = true;
+    }
+    console.log("TESTTAPPPERFFECT");
+  }, [link, token]);
 
   return (
     <header className="container">
@@ -51,31 +87,13 @@ const Header = () => {
             <Link to="/shoppingcart" className={style.shop_user_button}>
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>
-            {(userLogin && (
-              <Link
-                onClick={test}
-                to="/login"
-                className={style.shop_user_button}
-              >
-                <img
-                  src="/public/header/user.png"
-                  alt=""
-                  className={style.img}
-                />
-              </Link>
-            )) || (
-              <Link
-                onClick={test}
-                to="/myaccount"
-                className={style.shop_user_button}
-              >
-                <img
-                  src="/public/header/user.png"
-                  alt=""
-                  className={style.img}
-                />
-              </Link>
-            )}
+            <Link
+              onClick={chekUser}
+              to={link}
+              className={style.shop_user_button}
+            >
+              <img src="/public/header/user.png" alt="" className={style.img} />
+            </Link>
           </div>
         </div>
         <div className={style.header_nav}>
