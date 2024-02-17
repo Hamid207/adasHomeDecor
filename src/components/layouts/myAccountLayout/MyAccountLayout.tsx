@@ -1,9 +1,17 @@
 import style from "./MyAccountLayout.module.css";
 import "../../../assets/Container.css";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 const aa = () => {
   console.log("testtttt");
+};
+
+const logOutButtobAction = () => {
+  localStorage.clear();
+  setTimeout(() => {
+    window.location.reload();
+  }, 0.5);
 };
 
 const MyAccountLayout = () => {
@@ -46,7 +54,7 @@ const MyAccountLayout = () => {
             </svg>
             WISHLIST
           </NavLink>
-          <Link to="" className={style.logout}>
+          <Link to="/" className={style.logout} onClick={logOutButtobAction}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

@@ -1,0 +1,21 @@
+.button {
+  border-radius: 10px;
+  display: flex;
+  text-decoration: none;
+  gap: 20px;
+  /* color: white; */
+  width: 100%;
+  height: 100%;
+  /* background-color: #b8926a; */
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  background-color: #b8926a;
+  /* border: 1px solid #b8926a; */
+  border-radius: 10px;
+  color: white;
+}

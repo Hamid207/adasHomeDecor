@@ -1,13 +1,12 @@
 import style from "./LogInPage.module.css";
-import CustomInput from "../../../components/ui/customInput/CustomInput";
-import { Link } from "react-router-dom";
-import CustomLink from "../../../components/ui/customLink/CustomLink";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/Store";
 import { useEffect, useState } from "react";
 import inputStyle from "../loginInput.module.css";
 import { UserModel } from "../../../services/users.service";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
+import buttonStyle from "../loginButton.module.css";
 
 type LoginFormFields = {
   email: string;
@@ -20,10 +19,27 @@ type FormFields = {
 };
 
 const LogInPage = () => {
+  const userChek = useSelector((state: RootState) => state.users);
   const [userEmail, setUserEmail] = useState<string>("");
   const [userPass, setuserPass] = useState<string>("");
-  const userChek = useSelector((state: RootState) => state.users);
   const [token, setToken] = useLocalStorage("userTokenNull", "userToken");
+  const [chekUser, setChekUser] = useState<boolean>(false);
+
+  const navigate = useNavigate();
+
+  const buttonAction = () => {
+    console.log(chekUser);
+
+    if (chekUser == true && user) {
+      setToken(Object.values(user)[3]);
+      setTimeout(() => {
+        navigate("/myaccount");
+      }, 1000);
+      console.log("USER LOGIN OLDU");
+    }
+  };
+
+  const user = userChek.find((item: UserModel) => item.email === userEmail);
 
   const handleSumbit: React.FormEventHandler<HTMLFormElement & FormFields> = (
     event
@@ -36,15 +52,23 @@ const LogInPage = () => {
   };
 
   useEffect(() => {
-    const user = userChek.find((item: UserModel) => item.email === userEmail);
+    setChekUser(false);
+
     if (user) {
       if (
-        Object.values(user)[2] == userEmail &&
-        Object.values(user)[3] == userPass
+        Object.values(user)[1] == userEmail &&
+        Object.values(user)[2] == userPass
       ) {
-        setToken(Object.values(user)[4]);
-        console.log("USER LOGIN OLDU");
+        console.log(
+          Object.values(user)[1],
+          userEmail,
+          Object.values(user)[2],
+          userPass
+        );
+        setChekUser(true);
       } else {
+        setChekUser(false);
+
         console.log("USER LOGIN OLMADI");
       }
     }
@@ -69,15 +93,15 @@ const LogInPage = () => {
         <Link to="/resetpass" className={style.forgot_password_link}>
           Forgot password?
         </Link>
+        <button
+          onClick={buttonAction}
+          style={{ width: "438px", height: "54px" }}
+          className={buttonStyle.button}
+        >
+          LOG IN
+        </button>
       </form>
-      <CustomLink
-        to="/"
-        text="LOG IN"
-        width="438px"
-        height="54px"
-        backColor="brown"
-        hidden
-      />
+
       <div className={style.register_link_body}>
         <p>Don’t have an account?</p>
         <Link to="/register" className={style.register_link}>

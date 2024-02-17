@@ -681,18 +681,18 @@
   },
   "users": [
     {
-      "id": "1",
-      "fullname": "Kamran Asgarov",
-      "email": "kamranasgar0@gmail.com",
-      "password": "987654321",
-      "userToken": "123321123321213123123"
-    },
-    {
-      "id": "2",
-      "fullname": "Hamid Manafov",
+      "fullname": "hamid",
       "email": "hamidmanafov@gmail.com",
       "password": "hamid",
-      "userToken": "123213213414324324235235"
+      "userToken": "388266485170125",
+      "id": 1
+    },
+    {
+      "fullname": "hamid",
+      "email": "hamid@mail.ru",
+      "password": "hamid",
+      "userToken": "818185507651014",
+      "id": 2
     }
   ],
   "favorites": [
