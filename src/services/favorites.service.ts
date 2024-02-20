@@ -14,6 +14,10 @@ export const FavoritesService = {
       productId: props.productId,
     });
   },
+
+  async getDeleteFavorites(productId: number) {
+    await axios.delete(`http://localhost:3001/favorites/1`);
+  },
 };
 
 export interface FavoritesModel {

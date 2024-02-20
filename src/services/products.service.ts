@@ -1,5 +1,11 @@
 import axios from "axios";
 
+export enum Test {
+  null = "",
+  collectionId = "collectionId",
+  categoriesId = "categoriesId",
+}
+
 export const ProductsService = {
   async getProducts() {
     const responce = await axios.get("http://localhost:3001/products");

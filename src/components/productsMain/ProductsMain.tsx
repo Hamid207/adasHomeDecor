@@ -47,7 +47,6 @@ const ProductsMain = () => {
                 "BEDS AND HEADBOARDS",
                 "RUGS",
                 "CUSHIONS",
-                "SOFAS2",
                 "HEADBOARDS",
               ]}
             />
@@ -77,6 +76,7 @@ const ProductsMain = () => {
                   height="267px"
                   img={products.image}
                   price={products.price}
+                  desc={products.desc}
                   id={products.id}
                 />
               );

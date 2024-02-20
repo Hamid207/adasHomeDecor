@@ -26,7 +26,7 @@ const ProductsGrid = (props: ProductCard) => {
   const togle = () => {
     setLikeBtn(!likeBtn);
     const favorit = favorites.find(
-      (favorit: FavoritesModel) => favorit.id == props.id
+      (favorit: FavoritesModel) => favorit.productId == props.id
     );
 
     if (!likeBtn && favorit == undefined) {
@@ -45,8 +45,12 @@ const ProductsGrid = (props: ProductCard) => {
 
       fetchData();
       console.log("333333333333333");
-    } else {
+    } else if (likeBtn && favorit != undefined) {
+      const fetchDelete = async () => {
+        await FavoritesService.getDeleteFavorites(props.id);
+      };
       console.log("4444444444444444");
+      fetchDelete();
     }
   };
 

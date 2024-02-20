@@ -55,7 +55,14 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className={style.mini_slider}>
-              <CollectionSlider name="" isHidden={true} seeAllIshidden>
+              <CollectionSlider
+                name=""
+                isHidden={true}
+                seeAllIshidden
+                marginTop=""
+                backColor=""
+                height=""
+              >
                 {products
                   .filter((product: Product) => product.id < 4)
                   .map((product: Product) => {
@@ -116,6 +123,9 @@ const ProductDetail = () => {
             name="SIMILAR PRODUCTS"
             isHidden={true}
             seeAllIshidden
+            marginTop=""
+            backColor=""
+            height=""
           >
             {products.map((product: Product) => {
               return (
@@ -130,6 +140,7 @@ const ProductDetail = () => {
                     width="330px"
                     img={product.image}
                     price={product.price}
+                    desc={product.desc}
                     id={product.id}
                   />
                 </SwiperSlide>
