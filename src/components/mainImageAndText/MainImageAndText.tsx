@@ -21,6 +21,7 @@ const MainImageAndText = () => {
       const data = await HeadingsService.getHeading();
       setHeading(data);
     };
+
     fetchData();
   }, []);
 

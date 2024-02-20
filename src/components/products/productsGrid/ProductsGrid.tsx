@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import style from "./ProductsGrid.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/Store";
+import {
+  FavoritesModel,
+  FavoritesService,
+} from "../../../services/favorites.service";
 
 interface ProductCard {
   name: string;
@@ -12,10 +18,34 @@ interface ProductCard {
 }
 
 const ProductsGrid = (props: ProductCard) => {
+  const favorites = useSelector((state: RootState) => state.faforites);
   const [likeBtn, setLikeBtn] = useState<boolean>(false);
 
   const togle = () => {
     setLikeBtn(!likeBtn);
+    const favorit = favorites.find(
+      (favorit: FavoritesModel) => favorit.id == props.id
+    );
+
+    if (favorit == undefined) {
+    } else {
+      console.log("22222222222");
+    }
+
+    if (!likeBtn && favorit == undefined) {
+      const fetchData = async () => {
+        await FavoritesService.getAddFavorites({
+          image: props.img,
+          price: props.price,
+          title: props.name,
+        });
+      };
+
+      fetchData();
+      console.log("333333333333333");
+    } else {
+      console.log("4444444444444444");
+    }
   };
 
   return (

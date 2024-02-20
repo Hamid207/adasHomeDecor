@@ -7,7 +7,6 @@ import Contact from "../../components/contact/Contact";
 import CollectionsGrid from "../../components/collections/collectionsGrid/CollectionsGrid";
 import { SwiperSlide } from "swiper/react";
 import ProductsGrid from "../../components/products/productsGrid/ProductsGrid";
-
 import "../../components/sliders/collectionSlider/CollectionSilder.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";

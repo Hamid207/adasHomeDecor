@@ -1,15 +1,22 @@
 import style from "./Wishlist.module.css";
 
-const WishlistCart = () => {
+interface WishlistItem {
+  name: string;
+  price: string;
+  image: string;
+  id: number;
+}
+
+const WishlistCart = (props: WishlistItem) => {
   return (
     <div className={style.wishlist_cart_body}>
       <div className={style.img_title_body}>
         <div className={style.img_body}>
-          <img src="/public/main/sofa.png" alt="" />
+          <img src={props.image} alt="" />
         </div>
         <div className={style.title_body}>
-          <h3>Grayson Premium Grey Wash Nest of Tables</h3>
-          <p>140$</p>
+          <h3>{props.name}</h3>
+          <p>{props.price}$</p>
         </div>
       </div>
       <button>

@@ -1,7 +1,6 @@
 import style from "./MyAccountLayout.module.css";
 import "../../../assets/Container.css";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 const aa = () => {
   console.log("testtttt");

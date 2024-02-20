@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 250px;
+  margin-bottom: 20px;
 }
 
 .img_title_body {

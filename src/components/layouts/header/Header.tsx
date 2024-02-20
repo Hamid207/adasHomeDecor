@@ -70,7 +70,7 @@ const Header = () => {
             <Link to="" className={style.azBtn}>
               Az
             </Link>
-            <Link to="/myaccount" className={style.search_btn}>
+            <Link to="/" className={style.search_btn}>
               <img
                 src="/public/header/search.png"
                 alt=""

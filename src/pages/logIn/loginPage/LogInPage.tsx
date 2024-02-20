@@ -20,6 +20,7 @@ type FormFields = {
 
 const LogInPage = () => {
   const userChek = useSelector((state: RootState) => state.users);
+
   const [userEmail, setUserEmail] = useState<string>("");
   const [userPass, setuserPass] = useState<string>("");
   const [token, setToken] = useLocalStorage("userTokenNull", "userToken");
@@ -28,10 +29,9 @@ const LogInPage = () => {
   const navigate = useNavigate();
 
   const buttonAction = () => {
-    console.log(chekUser);
-
     if (chekUser == true && user) {
       setToken(Object.values(user)[3]);
+
       setTimeout(() => {
         navigate("/myaccount");
       }, 1000);

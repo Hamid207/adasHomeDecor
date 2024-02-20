@@ -685,35 +685,57 @@
       "email": "hamidmanafov@gmail.com",
       "password": "hamid",
       "userToken": "388266485170125",
-      "id": 1
+      "id": 1,
+      "wishlist": []
     },
     {
       "fullname": "hamid",
+      "email": "hamidmanafov@gmail.ru",
+      "password": "hamid",
+      "userToken": "829227435649061",
+      "id": 2,
+      "wishlist": []
+    },
+    {
+      "fullname": "asdasas",
       "email": "hamid@mail.ru",
       "password": "hamid",
-      "userToken": "818185507651014",
-      "id": 2
+      "userToken": "894830067405979",
+      "id": 3
     }
   ],
   "favorites": [
     {
-      "id": 30,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140",
+      "id": 1
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Modern Fabric Sofa Set",
+      "price": "750",
+      "id": 2
+    },
+    {
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140"
+      "title": "Contemporary TV Stand",
+      "price": "420",
+      "id": 3
     },
     {
-      "id": 33,
-      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140"
-    },
-    {
-      "id": 6,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
-      "title": "Cozy Armchair",
-      "price": "220"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Modern Console Table",
+      "price": "380",
+      "id": 4
     }
   ],
-  "cart": []
+  "cart": [],
+  "user": {
+    "fullname": "asdasas",
+    "email": "hamid@mail.ru",
+    "password": "hamid",
+    "userToken": "894830067405979",
+    "id": 3
+  }
 }
