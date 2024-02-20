@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import style from "./ProductsGrid.module.css";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../store/Store";
+import { RootState, store } from "../../../store/Store";
 import {
   FavoritesModel,
   FavoritesService,
 } from "../../../services/favorites.service";
+import { fetchFavorites } from "../../../store/slices/favoritesSlice";
 
 interface ProductCard {
   name: string;
@@ -14,6 +15,7 @@ interface ProductCard {
   height: string;
   img: string;
   price: string;
+  desc: string;
   id: number;
 }
 
@@ -27,18 +29,18 @@ const ProductsGrid = (props: ProductCard) => {
       (favorit: FavoritesModel) => favorit.id == props.id
     );
 
-    if (favorit == undefined) {
-    } else {
-      console.log("22222222222");
-    }
-
     if (!likeBtn && favorit == undefined) {
       const fetchData = async () => {
         await FavoritesService.getAddFavorites({
           image: props.img,
           price: props.price,
           title: props.name,
+          desc: props.desc,
+          productId: props.id,
         });
+
+        //fetchFavorites - relaod wishlist
+        store.dispatch(fetchFavorites());
       };
 
       fetchData();

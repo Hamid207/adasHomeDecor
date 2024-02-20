@@ -11,6 +11,7 @@ export const FavoritesService = {
       image: props.image,
       title: props.title,
       price: props.price,
+      productId: props.productId,
     });
   },
 };
@@ -20,10 +21,14 @@ export interface FavoritesModel {
   image: string;
   title: string;
   price: string;
+  desc: string;
+  productId: number;
 }
 
 interface FavoritespsuhModel {
   image: string;
   title: string;
   price: string;
+  desc: string;
+  productId: number;
 }

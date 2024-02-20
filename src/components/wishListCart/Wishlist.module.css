@@ -44,3 +44,8 @@
   height: 24px;
   background-color: #eae6df;
 }
+
+.link {
+  text-decoration: none;
+  color: #2d2d2b;
+}

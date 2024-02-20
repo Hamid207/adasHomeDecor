@@ -36,6 +36,7 @@ const Products = () => {
                   width="330px"
                   img={product.image}
                   price={product.price}
+                  desc={product.desc}
                   id={product.id}
                 />
               );

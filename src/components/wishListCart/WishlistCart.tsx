@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./Wishlist.module.css";
 
 interface WishlistItem {
@@ -10,15 +11,17 @@ interface WishlistItem {
 const WishlistCart = (props: WishlistItem) => {
   return (
     <div className={style.wishlist_cart_body}>
-      <div className={style.img_title_body}>
-        <div className={style.img_body}>
-          <img src={props.image} alt="" />
+      <Link to={`/products/productsDetail/${props.id}`} className={style.link}>
+        <div className={style.img_title_body}>
+          <div className={style.img_body}>
+            <img src={props.image} alt="" />
+          </div>
+          <div className={style.title_body}>
+            <h3>{props.name}</h3>
+            <p>{props.price}$</p>
+          </div>
         </div>
-        <div className={style.title_body}>
-          <h3>{props.name}</h3>
-          <p>{props.price}$</p>
-        </div>
-      </div>
+      </Link>
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"

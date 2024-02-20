@@ -15,7 +15,7 @@ const WishlistPage = () => {
             name={favorit.title}
             price={favorit.price}
             image={favorit.image}
-            id={favorit.id}
+            id={favorit.productId}
           />
         );
       })}
