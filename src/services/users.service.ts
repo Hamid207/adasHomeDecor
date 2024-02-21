@@ -16,6 +16,15 @@ export const UsersService = {
 
     return responce.data;
   },
+
+  async getUserPut(props: UserModel) {
+    await axios.put(`http://localhost:3001/users/${props.id}`, {
+      fullname: props.fullname,
+      email: props.email,
+      password: props.password,
+      userToken: props.userToken,
+    });
+  },
 };
 
 export interface UserModel {

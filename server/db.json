@@ -650,34 +650,11 @@
   },
   "users": [
     {
-      "fullname": "hamid",
+      "fullname": "Hamid",
       "email": "hamidmanafov@gmail.com",
-      "password": "hamid",
-      "userToken": "388266485170125",
-      "id": 1,
-      "wishlist": []
-    },
-    {
-      "fullname": "hamid",
-      "email": "hamidmanafov@gmail.ru",
-      "password": "hamid",
-      "userToken": "829227435649061",
-      "id": 2,
-      "wishlist": []
-    },
-    {
-      "fullname": "asdasas",
-      "email": "hamid@mail.ru",
-      "password": "hamid",
-      "userToken": "894830067405979",
-      "id": 3
-    },
-    {
-      "fullname": "hamid",
-      "email": "asdasd@mail.ru",
-      "password": "hamid",
-      "userToken": "97003900751965",
-      "id": 4
+      "password": "123",
+      "userToken": "385037039687310",
+      "id": 1
     }
   ],
   "favorites": [

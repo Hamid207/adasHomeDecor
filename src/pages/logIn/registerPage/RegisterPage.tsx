@@ -57,8 +57,10 @@ const RegisterPage = () => {
       fetchData();
       console.log("NEW USERRRRRRRRR");
       setToken(token);
+
       setTimeout(() => {
         navigate("/");
+        window.location.reload();
       }, 1000);
     }
   };

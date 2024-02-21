@@ -18,7 +18,7 @@ const LogInPage = () => {
 
   const [userEmail, setUserEmail] = useState<string>("");
   const [userPass, setuserPass] = useState<string>("");
-  const [token, setToken] = useLocalStorage("userTokenNull", "userToken");
+  const [token, setToken] = useLocalStorage("", "userToken");
   const [chekUser, setChekUser] = useState<boolean>(false);
 
   const navigate = useNavigate();
@@ -51,29 +51,21 @@ const LogInPage = () => {
         Object.values(user)[1] == userEmail &&
         Object.values(user)[2] == userPass
       ) {
-        console.log(
-          Object.values(user)[1],
-          userEmail,
-          Object.values(user)[2],
-          userPass
-        );
         setChekUser(true);
       } else {
         setChekUser(false);
-
         console.log("USER LOGIN OLMADI");
       }
     }
   }, [userEmail, userPass]);
 
   const buttonAction = () => {
-    console.log("UZERRRR", user);
-
     if (chekUser == true && user) {
       setToken(Object.values(user)[3]);
-
+      setTimeout(() => {}, 0.5);
       setTimeout(() => {
-        navigate("/myaccount");
+        navigate("/");
+        window.location.reload();
       }, 1000);
       console.log("USER LOGIN OLDU");
     }

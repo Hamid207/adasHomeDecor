@@ -1,10 +1,7 @@
 import style from "./MyAccountLayout.module.css";
 import "../../../assets/Container.css";
 import { Link, NavLink, Outlet } from "react-router-dom";
-
-const aa = () => {
-  console.log("testtttt");
-};
+import { useEffect, useState } from "react";
 
 const logOutButtobAction = () => {
   localStorage.clear();
@@ -14,6 +11,22 @@ const logOutButtobAction = () => {
 };
 
 const MyAccountLayout = () => {
+  const [bold, setBold] = useState<boolean>(true);
+
+  const personalLinkAction = () => {
+    //click once
+    if (!bold) {
+      setBold(!bold);
+    }
+  };
+
+  const wishlistLinkAction = () => {
+    //click once
+    if (bold) {
+      setBold(!bold);
+    }
+  };
+
   return (
     <div className="container">
       <div className={style.navigation_title_body}>
@@ -25,7 +38,11 @@ const MyAccountLayout = () => {
       <div className={style.account_body}>
         <div className={style.left_body}>
           <p>MY ACCOUNT</p>
-          <NavLink to="/myaccount">
+          <NavLink
+            to="/myaccount"
+            onClick={personalLinkAction}
+            className={(bold && style.bold) || style.light}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -38,7 +55,11 @@ const MyAccountLayout = () => {
             </svg>
             PERSONAL INFORMATION
           </NavLink>
-          <NavLink to="wishlist" onClick={aa}>
+          <NavLink
+            to="wishlist"
+            className={(bold && style.light) || style.bold}
+            onClick={wishlistLinkAction}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -64,15 +85,15 @@ const MyAccountLayout = () => {
               <path
                 d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.2429 22 18.8286 22 16.0002 22H15.0002C12.1718 22 10.7576 22 9.87889 21.1213C9.11051 20.3529 9.01406 19.175 9.00195 17"
                 stroke="#2D2D2B"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               />
               <path
                 d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15"
                 stroke="#2D2D2B"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             LOG OUT
