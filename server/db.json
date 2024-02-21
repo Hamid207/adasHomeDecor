@@ -671,6 +671,13 @@
       "password": "hamid",
       "userToken": "894830067405979",
       "id": 3
+    },
+    {
+      "fullname": "hamid",
+      "email": "asdasd@mail.ru",
+      "password": "hamid",
+      "userToken": "97003900751965",
+      "id": 4
     }
   ],
   "favorites": [
@@ -701,6 +708,13 @@
       "price": "120",
       "productId": 9,
       "id": 4
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Modern Fabric Sofa Set",
+      "price": "750",
+      "productId": 3,
+      "id": 5
     }
   ],
   "cart": [],

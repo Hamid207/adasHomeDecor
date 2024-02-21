@@ -22,45 +22,16 @@ const setActive = ({ isActive }: { isActive: boolean }) =>
 
 const Header = () => {
   const [userLogin, setUserLogin] = useState<boolean>(false);
-  const [link, setLink] = useState<string>("");
 
-  const [token, setToken] = useLocalStorage("userTokenNull", "userToken");
-  var loginOrAcount = "";
-
-  const chekUser = () => {
-    // setUserLogin(!userLogin);
-    // setToken("TOKEN123456789");
-
-    if (token == "userTokenNull") {
-      console.log(token);
-      loginOrAcount = "/login";
-      setLink("/login");
-      setUserLogin(false);
-    } else {
-      console.log(token);
-
-      setUserLogin(true);
-      setLink("/myaccount");
-      loginOrAcount = "/myaccount";
-    }
-
-    // if (userLogin == false) {
-    //   loginOrAcount = false;
-    // } else if (userLogin == true) {
-    //   loginOrAcount = true;
-    // }
-    console.log("TAP");
-    console.log(loginOrAcount);
-  };
+  const [token, setToken] = useLocalStorage("", "userToken");
 
   useEffect(() => {
-    if (userLogin == false) {
-      // loginOrAcount = false;
-    } else if (userLogin == true) {
-      // loginOrAcount = true;
+    if (token == "") {
+      setUserLogin(false);
+    } else {
+      setUserLogin(true);
     }
-    console.log("TESTTAPPPERFFECT");
-  }, [link, token]);
+  }, [token]);
 
   return (
     <header className="container">
@@ -88,8 +59,7 @@ const Header = () => {
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>
             <Link
-              onClick={chekUser}
-              to={link}
+              to={(userLogin && "/myaccount") || "/login"}
               className={style.shop_user_button}
             >
               <img src="/public/header/user.png" alt="" className={style.img} />

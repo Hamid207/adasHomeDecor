@@ -8,11 +8,6 @@ import { UserModel } from "../../../services/users.service";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import buttonStyle from "../loginButton.module.css";
 
-type LoginFormFields = {
-  email: string;
-  password: string;
-};
-
 type FormFields = {
   email: HTMLInputElement;
   password: HTMLInputElement;
@@ -28,18 +23,15 @@ const LogInPage = () => {
 
   const navigate = useNavigate();
 
-  const buttonAction = () => {
-    if (chekUser == true && user) {
-      setToken(Object.values(user)[3]);
+  const user = userChek.find((item: UserModel) => item.email === userEmail);
 
-      setTimeout(() => {
-        navigate("/myaccount");
-      }, 1000);
-      console.log("USER LOGIN OLDU");
-    }
+  const changeEngmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUserEmail(event.currentTarget.value);
   };
 
-  const user = userChek.find((item: UserModel) => item.email === userEmail);
+  const changePass = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setuserPass(event.currentTarget.value);
+  };
 
   const handleSumbit: React.FormEventHandler<HTMLFormElement & FormFields> = (
     event
@@ -74,6 +66,19 @@ const LogInPage = () => {
     }
   }, [userEmail, userPass]);
 
+  const buttonAction = () => {
+    console.log("UZERRRR", user);
+
+    if (chekUser == true && user) {
+      setToken(Object.values(user)[3]);
+
+      setTimeout(() => {
+        navigate("/myaccount");
+      }, 1000);
+      console.log("USER LOGIN OLDU");
+    }
+  };
+
   return (
     <div className={style.body}>
       <h3 className={style.title}>LOG IN</h3>
@@ -83,9 +88,17 @@ const LogInPage = () => {
           type="email"
           placeholder="E-MAIL ADRESS"
           className={inputStyle.loginInput}
+          value={userEmail}
+          onChange={changeEngmail}
         />
         <div className={style.password_body}>
-          <input name="password" type="password" placeholder="PASSWORD" />
+          <input
+            name="password"
+            type="password"
+            placeholder="PASSWORD"
+            value={userPass}
+            onChange={changePass}
+          />
           <button>
             <img src="/public/login//Eye.png" alt="" />
           </button>
