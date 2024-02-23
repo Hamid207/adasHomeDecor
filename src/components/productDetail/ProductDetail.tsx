@@ -13,7 +13,6 @@ import {
   ShoppingCartService,
 } from "../../services/shoppingCart.service";
 import { fetchShoppingCart } from "../../store/slices/shoppingCartSlice";
-import { itemCountEmpty } from "../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 const ProductDetail = () => {
   const products = useSelector((state: RootState) => state.productts);
@@ -32,7 +31,6 @@ const ProductDetail = () => {
   });
   const [count, setCount] = useState<number>(1);
   const [price, setPrice] = useState<number>(0);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!id) return;
@@ -66,7 +64,6 @@ const ProductDetail = () => {
       fetchData();
       setTimeout(() => {
         store.dispatch(fetchShoppingCart());
-        dispatch(itemCountEmpty());
       }, 1000);
     }
   };

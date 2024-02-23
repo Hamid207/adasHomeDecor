@@ -699,36 +699,12 @@
   ],
   "cart": [
     {
-      "id": 1,
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
-      "price": "140",
-      "count": 1,
-      "countPrice": 140
-    },
-    {
-      "id": 5,
-      "title": "Contemporary TV Stand",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
-      "price": "420",
-      "count": 1,
-      "countPrice": 420
-    },
-    {
-      "id": 10,
-      "title": "Modern Console Table",
+      "id": 3,
+      "title": "Modern Fabric Sofa Set",
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
-      "price": "380",
+      "price": "750",
       "count": 1,
-      "countPrice": 380
-    },
-    {
-      "id": 4,
-      "title": "Elegant Bedside Table",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
-      "price": "300",
-      "count": 3,
-      "countPrice": 900
+      "countPrice": 750
     }
   ]
 }

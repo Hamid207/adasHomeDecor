@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
-import { ShoppingCartModel } from "../../services/shoppingCart.service";
+import {
+  ShoppingCartModel,
+  ShoppingCartService,
+} from "../../services/shoppingCart.service";
 import style from "./ShoppingCard.module.css";
 import { useDispatch } from "react-redux";
 import {
-  itemCountMinus,
-  itemCountPlus,
+  totalPriceMinus,
+  totalPricePlus,
 } from "../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
+import { store } from "../../store/Store";
+import { fetchShoppingCart } from "../../store/slices/shoppingCartSlice";
 
 const ShoppingCard = (props: ShoppingCartModel) => {
   const [count, setCount] = useState<number>(1);
@@ -15,27 +20,32 @@ const ShoppingCard = (props: ShoppingCartModel) => {
   const plusButton = () => {
     setCount(count + 1);
     setPrice(price + Number(props.price));
-    dispatch(itemCountPlus(Number(props.price)));
+    dispatch(totalPricePlus(Number(props.price)));
   };
 
   const minusButton = () => {
     setCount(count - 1);
     setPrice(price - Number(props.price));
-    dispatch(itemCountMinus(Number(props.price)));
+    dispatch(totalPriceMinus(Number(props.price)));
   };
 
   useEffect(() => {
     setCount(props.count);
     setPrice(props.countPrice);
-    dispatch(itemCountPlus(props.countPrice));
+    dispatch(totalPricePlus(props.countPrice));
   }, []);
+
+  const deleteShoppingCart = async () => {
+    await ShoppingCartService.deleteShoppingCart(props.id);
+    dispatch(totalPriceMinus(price));
+    store.dispatch(fetchShoppingCart());
+  };
 
   return (
     <div className={style.shoppingCard_body}>
-      <button>X</button>
+      <button onClick={deleteShoppingCart}>X</button>
       <div className={style.img_and_text_body}>
         <div className={style.img_body}>
-          {/* <img src="/public/main/sofa.png" alt="" /> */}
           <img src={props.image} alt="" />
         </div>
         <div className={style.main_text_body}>

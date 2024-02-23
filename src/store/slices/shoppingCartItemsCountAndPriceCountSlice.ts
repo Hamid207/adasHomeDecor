@@ -5,26 +5,22 @@ import { useState } from "react";
 
 const shoppingCartItemsCountAndPriceCountSlice = createSlice({
   name: "itemAndPriceCount",
-  initialState: { itemCount: 0, totalPrice: 0 },
+  initialState: { totalPrice: 0 },
   reducers: {
-    itemCountPlus: (state, action) => {
-      state.itemCount += action.payload;
+    totalPricePlus: (state, action) => {
+      state.totalPrice += action.payload;
     },
 
-    itemCountMinus: (state, action) => {
-      state.itemCount -= action.payload;
+    totalPriceMinus: (state, action) => {
+      state.totalPrice -= action.payload;
     },
 
-    itemCountEmpty: (state) => {
-      state.itemCount = 0;
-    },
-
-    totalPrice: (state, action) => {
-      state.totalPrice = action.payload;
+    totalPriceEmpty: (state) => {
+      state.totalPrice = 0;
     },
   },
 });
 
-export const { itemCountPlus, itemCountMinus, itemCountEmpty, totalPrice } =
+export const { totalPricePlus, totalPriceMinus, totalPriceEmpty } =
   shoppingCartItemsCountAndPriceCountSlice.actions;
 export default shoppingCartItemsCountAndPriceCountSlice;

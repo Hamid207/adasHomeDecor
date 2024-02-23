@@ -4,7 +4,7 @@ import style from "./Header.module.css";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { useDispatch } from "react-redux";
-import { itemCountEmpty } from "../../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
+import { totalPriceEmpty } from "../../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
@@ -60,7 +60,7 @@ const Header = () => {
             <Link
               to="/shoppingcart"
               className={style.shop_user_button}
-              onClick={() => dispatch(itemCountEmpty())}
+              onClick={() => dispatch(totalPriceEmpty())}
             >
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>

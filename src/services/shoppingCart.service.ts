@@ -16,6 +16,10 @@ export const ShoppingCartService = {
       countPrice: props.countPrice,
     });
   },
+
+  async deleteShoppingCart(id: number) {
+    await axios.delete(`http://localhost:3001/cart/${id}`);
+  },
 };
 
 export interface ShoppingCartModel {

@@ -1,15 +1,14 @@
 import style from "./AhoppingCartPage.module.css";
 import CustomLink from "../../components/ui/customLink/CustomLink";
 import ShoppingCard from "../../components/shoppingCart/ShoppingCard";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
 import { ShoppingCartModel } from "../../services/shoppingCart.service";
-import { itemCountEmpty } from "../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 const ShoppingCartPage = () => {
   const shoppingCarts = useSelector((state: RootState) => state.shoppingCart);
   const shoppingCartsTotalPrice = useSelector(
-    (state: RootState) => state.shoppingCartItemCountAndToalPrice.itemCount
+    (state: RootState) => state.shoppingCartItemCountAndToalPrice.totalPrice
   );
 
   return (
