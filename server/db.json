@@ -703,42 +703,32 @@
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "price": "140",
-      "count": 0
+      "count": 1,
+      "countPrice": 140
     },
     {
-      "id": 13,
-      "title": "Versatile Bookcase",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
-      "price": "320",
-      "count": 0
-    },
-    {
-      "id": 2,
-      "title": "Premium Wooden Dining Table",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
-      "price": "550",
-      "count": 0
-    },
-    {
-      "id": 12,
-      "title": "Elegant Dressing Table",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
-      "price": "480",
-      "count": 0
-    },
-    {
-      "id": 16,
-      "title": "Classic Armchair",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "id": 5,
+      "title": "Contemporary TV Stand",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
       "price": "420",
-      "count": 0
+      "count": 1,
+      "countPrice": 420
     },
     {
-      "id": 18,
-      "title": "Elegant Vanity Table",
+      "id": 10,
+      "title": "Modern Console Table",
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
-      "price": "550",
-      "count": 4
+      "price": "380",
+      "count": 1,
+      "countPrice": 380
+    },
+    {
+      "id": 4,
+      "title": "Elegant Bedside Table",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "price": "300",
+      "count": 3,
+      "countPrice": 900
     }
   ]
 }

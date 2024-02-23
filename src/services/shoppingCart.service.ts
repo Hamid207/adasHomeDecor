@@ -13,6 +13,7 @@ export const ShoppingCartService = {
       image: props.image,
       price: props.price,
       count: props.count,
+      countPrice: props.countPrice,
     });
   },
 };
@@ -23,4 +24,5 @@ export interface ShoppingCartModel {
   image: string;
   price: string;
   count: number;
+  countPrice: number;
 }

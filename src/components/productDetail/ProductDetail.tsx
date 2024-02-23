@@ -4,7 +4,7 @@ import CustomLink from "../ui/customLink/CustomLink";
 import style from "./ProductDetail.module.css";
 import { Product, ProductsService } from "../../services/products.service";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState, store } from "../../store/Store";
 import { SwiperSlide } from "swiper/react";
 import ProductsGrid from "../products/productsGrid/ProductsGrid";
@@ -13,6 +13,7 @@ import {
   ShoppingCartService,
 } from "../../services/shoppingCart.service";
 import { fetchShoppingCart } from "../../store/slices/shoppingCartSlice";
+import { itemCountEmpty } from "../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 const ProductDetail = () => {
   const products = useSelector((state: RootState) => state.productts);
@@ -29,13 +30,16 @@ const ProductDetail = () => {
     price: "",
     views: 0,
   });
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(1);
+  const [price, setPrice] = useState<number>(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!id) return;
     const fetchData = async () => {
       const data = await ProductsService.getById(id);
       setDetail(data);
+      setPrice(Number(data.price));
     };
 
     fetchData();
@@ -56,13 +60,25 @@ const ProductDetail = () => {
           image: detail.image,
           price: detail.price,
           count: count,
+          countPrice: price,
         });
       };
       fetchData();
       setTimeout(() => {
         store.dispatch(fetchShoppingCart());
+        dispatch(itemCountEmpty());
       }, 1000);
     }
+  };
+
+  const plusButton = () => {
+    setCount(count + 1);
+    setPrice(price + Number(detail.price));
+  };
+
+  const minusButton = () => {
+    setCount(count - 1);
+    setPrice(price - Number(detail.price));
   };
 
   return (
@@ -122,16 +138,13 @@ const ProductDetail = () => {
               <button></button>
             </div>
             <div className={style.product_count}>
-              <button onClick={() => setCount(count + 1)}>+</button>
+              <button onClick={plusButton}>+</button>
               <p>{count}</p>
-              <button
-                onClick={() => setCount(count - 1)}
-                disabled={count === 0}
-              >
+              <button onClick={minusButton} disabled={count === 1}>
                 -
               </button>
             </div>
-            <h3 className={style.price}>{detail.price}$</h3>
+            <h3 className={style.price}>{price.toString()}$</h3>
             <div className={style.buttons_body}>
               <CustomLink
                 to=""

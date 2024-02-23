@@ -3,6 +3,8 @@ import "../../../assets/Container.css";
 import style from "./Header.module.css";
 import { useEffect, useState } from "react";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
+import { useDispatch } from "react-redux";
+import { itemCountEmpty } from "../../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
@@ -22,8 +24,8 @@ const setActive = ({ isActive }: { isActive: boolean }) =>
 
 const Header = () => {
   const [userLogin, setUserLogin] = useState<boolean>(false);
-
   const [token, setToken] = useLocalStorage("", "userToken");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (token == "") {
@@ -55,7 +57,11 @@ const Header = () => {
             </Link>
           </div>
           <div className={style.header_right}>
-            <Link to="/shoppingcart" className={style.shop_user_button}>
+            <Link
+              to="/shoppingcart"
+              className={style.shop_user_button}
+              onClick={() => dispatch(itemCountEmpty())}
+            >
               <img src="/public/header/shop.png" alt="" className={style.img} />
             </Link>
             <Link

@@ -8,6 +8,7 @@ import favoritesSlice, { fetchFavorites } from "./slices/favoritesSlice";
 import shoppingCartSlice, {
   fetchShoppingCart,
 } from "./slices/shoppingCartSlice";
+import shoppingCartItemsCountAndPriceCountSlice from "./slices/shoppingCartItemsCountAndPriceCountSlice";
 
 export const store = configureStore({
   reducer: {
@@ -18,6 +19,8 @@ export const store = configureStore({
     userToken: userTokenSlice.reducer,
     faforites: favoritesSlice.reducer,
     shoppingCart: shoppingCartSlice.reducer,
+    shoppingCartItemCountAndToalPrice:
+      shoppingCartItemsCountAndPriceCountSlice.reducer,
   },
 });
 

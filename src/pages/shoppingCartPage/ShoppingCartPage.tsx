@@ -1,12 +1,16 @@
 import style from "./AhoppingCartPage.module.css";
 import CustomLink from "../../components/ui/customLink/CustomLink";
 import ShoppingCard from "../../components/shoppingCart/ShoppingCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
 import { ShoppingCartModel } from "../../services/shoppingCart.service";
+import { itemCountEmpty } from "../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 const ShoppingCartPage = () => {
   const shoppingCarts = useSelector((state: RootState) => state.shoppingCart);
+  const shoppingCartsTotalPrice = useSelector(
+    (state: RootState) => state.shoppingCartItemCountAndToalPrice.itemCount
+  );
 
   return (
     <div>
@@ -27,6 +31,7 @@ const ShoppingCartPage = () => {
                 image={cart.image}
                 price={cart.price}
                 count={cart.count}
+                countPrice={cart.countPrice}
               />
             );
           })}
@@ -35,11 +40,11 @@ const ShoppingCartPage = () => {
           <h3>SUMMARY</h3>
           <div>
             <p>ITEM COUNT</p>
-            <p>4</p>
+            <p>{shoppingCarts.length}</p>
           </div>
           <div>
             <p>TOTAL PRICE</p>
-            <p>460$</p>
+            <p>{shoppingCartsTotalPrice}$</p>
           </div>
           <CustomLink
             to="/"

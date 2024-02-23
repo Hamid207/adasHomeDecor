@@ -1,13 +1,35 @@
 import { useEffect, useState } from "react";
 import { ShoppingCartModel } from "../../services/shoppingCart.service";
 import style from "./ShoppingCard.module.css";
+import { useDispatch } from "react-redux";
+import {
+  itemCountMinus,
+  itemCountPlus,
+} from "../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
 
 const ShoppingCard = (props: ShoppingCartModel) => {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(1);
+  const [price, setPrice] = useState<number>(0);
+  const dispatch = useDispatch();
+
+  const plusButton = () => {
+    setCount(count + 1);
+    setPrice(price + Number(props.price));
+    dispatch(itemCountPlus(Number(props.price)));
+  };
+
+  const minusButton = () => {
+    setCount(count - 1);
+    setPrice(price - Number(props.price));
+    dispatch(itemCountMinus(Number(props.price)));
+  };
 
   useEffect(() => {
     setCount(props.count);
-  }, [count]);
+    setPrice(props.countPrice);
+    dispatch(itemCountPlus(props.countPrice));
+  }, []);
+
   return (
     <div className={style.shoppingCard_body}>
       <button>X</button>
@@ -23,11 +45,13 @@ const ShoppingCard = (props: ShoppingCartModel) => {
       <span></span>
 
       <div className={style.product_count}>
-        <button>+</button>
+        <button onClick={plusButton}>+</button>
         <p>{count}</p>
-        <button>-</button>
+        <button onClick={minusButton} disabled={count === 1}>
+          -
+        </button>
       </div>
-      <h3>{props.price}$</h3>
+      <h3>{price}$</h3>
     </div>
   );
 };
