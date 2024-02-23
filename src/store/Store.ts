@@ -5,6 +5,9 @@ import collectionsSlice, { fetchCollections } from "./slices/collectionsSlice";
 import usersSlice, { fetchUsers } from "./slices/usersSlice";
 import userTokenSlice from "./slices/userTokenSlice";
 import favoritesSlice, { fetchFavorites } from "./slices/favoritesSlice";
+import shoppingCartSlice, {
+  fetchShoppingCart,
+} from "./slices/shoppingCartSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +17,7 @@ export const store = configureStore({
     users: usersSlice.reducer,
     userToken: userTokenSlice.reducer,
     faforites: favoritesSlice.reducer,
+    shoppingCart: shoppingCartSlice.reducer,
   },
 });
 
@@ -22,6 +26,7 @@ store.dispatch(fetchProducts());
 store.dispatch(fetchCollections());
 store.dispatch(fetchUsers());
 store.dispatch(fetchFavorites());
+store.dispatch(fetchShoppingCart());
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

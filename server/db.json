@@ -627,7 +627,38 @@
       "colTitle": "Bathroom"
     }
   ],
-  "categories": [],
+  "categories": [
+    {
+      "id": 1,
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle109.png",
+      "catTitle": "SOFAS"
+    },
+    {
+      "id": 2,
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle110.png",
+      "catTitle": "BEDS AND HEADBOARDS"
+    },
+    {
+      "id": 3,
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle111.png",
+      "catTitle": "RUGS"
+    },
+    {
+      "id": 4,
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle112.png",
+      "catTitle": "CUSHIONS"
+    },
+    {
+      "id": 5,
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle111.png",
+      "catTitle": "ARMCHAIRS"
+    },
+    {
+      "id": 6,
+      "image": "/src/assets/homePapeImage/firstSwiper/Rectangle109.png",
+      "catTitle": "HEADBOARDS"
+    }
+  ],
   "about": {
     "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/754ef2206125e68f344e6b26d5b0e7816a0e4381",
     "desc": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat et voluptates repudiandae sint et molestiae non"
@@ -650,10 +681,10 @@
   },
   "users": [
     {
-      "fullname": "Hamid",
+      "fullname": "hamid",
       "email": "hamidmanafov@gmail.com",
-      "password": "123",
-      "userToken": "385037039687310",
+      "password": "hamid",
+      "userToken": "555047606814145",
       "id": 1
     }
   ],
@@ -664,42 +695,50 @@
       "price": "140",
       "productId": 1,
       "id": 1
-    },
-    {
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
-      "title": "Premium Wooden Dining Table",
-      "price": "550",
-      "productId": 2,
-      "id": 2
-    },
-    {
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
-      "title": "Elegant Dining Chair",
-      "price": "120",
-      "productId": 9,
-      "id": 3
-    },
-    {
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
-      "title": "Elegant Dining Chair",
-      "price": "120",
-      "productId": 9,
-      "id": 4
-    },
-    {
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
-      "title": "Modern Fabric Sofa Set",
-      "price": "750",
-      "productId": 3,
-      "id": 5
     }
   ],
-  "cart": [],
-  "user": {
-    "fullname": "asdasas",
-    "email": "hamid@mail.ru",
-    "password": "hamid",
-    "userToken": "894830067405979",
-    "id": 3
-  }
+  "cart": [
+    {
+      "id": 1,
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "price": "140",
+      "count": 0
+    },
+    {
+      "id": 13,
+      "title": "Versatile Bookcase",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "price": "320",
+      "count": 0
+    },
+    {
+      "id": 2,
+      "title": "Premium Wooden Dining Table",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "price": "550",
+      "count": 0
+    },
+    {
+      "id": 12,
+      "title": "Elegant Dressing Table",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "price": "480",
+      "count": 0
+    },
+    {
+      "id": 16,
+      "title": "Classic Armchair",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "price": "420",
+      "count": 0
+    },
+    {
+      "id": 18,
+      "title": "Elegant Vanity Table",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "price": "550",
+      "count": 4
+    }
+  ]
 }

@@ -41,7 +41,7 @@ const MainImageAndText = () => {
           </div>
           <div className={style.show_now_link_body}>
             <CustomLink
-              to="/"
+              to="/products"
               text="SHOP NOW"
               width="330px"
               height="54px"

@@ -5,13 +5,18 @@ import style from "./ProductDetail.module.css";
 import { Product, ProductsService } from "../../services/products.service";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/Store";
+import { RootState, store } from "../../store/Store";
 import { SwiperSlide } from "swiper/react";
 import ProductsGrid from "../products/productsGrid/ProductsGrid";
+import {
+  ShoppingCartModel,
+  ShoppingCartService,
+} from "../../services/shoppingCart.service";
+import { fetchShoppingCart } from "../../store/slices/shoppingCartSlice";
 
 const ProductDetail = () => {
   const products = useSelector((state: RootState) => state.productts);
-
+  const shoppingCarts = useSelector((state: RootState) => state.shoppingCart);
   const { id } = useParams() as { id: string };
 
   const [detail, setDetail] = useState<Product>({
@@ -24,6 +29,7 @@ const ProductDetail = () => {
     price: "",
     views: 0,
   });
+  const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
     if (!id) return;
@@ -36,6 +42,29 @@ const ProductDetail = () => {
   }, [id]);
 
   window.scrollTo(0, 0);
+
+  const addToShoppingCarts = () => {
+    const chekShoppingCart = shoppingCarts.find(
+      (cart: ShoppingCartModel) => cart.id == Number(id)
+    );
+
+    if (!chekShoppingCart) {
+      const fetchData = async () => {
+        await ShoppingCartService.postShoppingCart({
+          id: Number(id),
+          title: detail.title,
+          image: detail.image,
+          price: detail.price,
+          count: count,
+        });
+      };
+      fetchData();
+      setTimeout(() => {
+        store.dispatch(fetchShoppingCart());
+      }, 1000);
+    }
+  };
+
   return (
     <>
       <section className={style.body}>
@@ -93,9 +122,14 @@ const ProductDetail = () => {
               <button></button>
             </div>
             <div className={style.product_count}>
-              <button>+</button>
-              <p>0</p>
-              <button>-</button>
+              <button onClick={() => setCount(count + 1)}>+</button>
+              <p>{count}</p>
+              <button
+                onClick={() => setCount(count - 1)}
+                disabled={count === 0}
+              >
+                -
+              </button>
             </div>
             <h3 className={style.price}>{detail.price}$</h3>
             <div className={style.buttons_body}>
@@ -107,14 +141,10 @@ const ProductDetail = () => {
                 backColor="brown"
                 hidden={true}
               />
-              <CustomLink
-                to=""
-                text="ADD TO CART"
-                width="330px"
-                height="54px"
-                backColor="none"
-                hidden={true}
-              />
+
+              <button className={style.button} onClick={addToShoppingCarts}>
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>

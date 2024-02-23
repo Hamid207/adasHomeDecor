@@ -1,8 +1,13 @@
 import style from "./AhoppingCartPage.module.css";
 import CustomLink from "../../components/ui/customLink/CustomLink";
 import ShoppingCard from "../../components/shoppingCart/ShoppingCard";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/Store";
+import { ShoppingCartModel } from "../../services/shoppingCart.service";
 
 const ShoppingCartPage = () => {
+  const shoppingCarts = useSelector((state: RootState) => state.shoppingCart);
+
   return (
     <div>
       <div className={style.navigation_title_body}>
@@ -14,10 +19,17 @@ const ShoppingCartPage = () => {
       </div>
       <div className={style.shoppingCart_body}>
         <div>
-          <ShoppingCard />
-          <ShoppingCard />
-          <ShoppingCard />
-          <ShoppingCard />
+          {shoppingCarts.map((cart: ShoppingCartModel) => {
+            return (
+              <ShoppingCard
+                id={cart.id}
+                title={cart.title}
+                image={cart.image}
+                price={cart.price}
+                count={cart.count}
+              />
+            );
+          })}
         </div>
         <div className={style.right_body}>
           <h3>SUMMARY</h3>

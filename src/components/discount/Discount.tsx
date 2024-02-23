@@ -31,7 +31,7 @@ const Discount = () => {
         </div>
 
         <CustomLink
-          to=""
+          to="/products"
           text="SHOP NOW"
           width="330px"
           height="54px"

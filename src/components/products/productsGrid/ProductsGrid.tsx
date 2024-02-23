@@ -44,12 +44,10 @@ const ProductsGrid = (props: ProductCard) => {
       };
 
       fetchData();
-      console.log("333333333333333");
     } else if (likeBtn && favorit != undefined) {
       const fetchDelete = async () => {
         await FavoritesService.getDeleteFavorites(props.id);
       };
-      console.log("4444444444444444");
       fetchDelete();
     }
   };
