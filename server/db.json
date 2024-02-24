@@ -695,6 +695,13 @@
       "price": "140",
       "productId": 1,
       "id": 1
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Modern Fabric Sofa Set",
+      "price": "750",
+      "productId": 3,
+      "id": 2
     }
   ],
   "cart": [

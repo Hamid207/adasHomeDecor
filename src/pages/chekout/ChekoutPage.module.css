@@ -93,10 +93,10 @@
 
 .payment_method > button,
 .deliver_method > button {
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   /* background-color: #b8926a; */
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #eae6df;
 }
 
