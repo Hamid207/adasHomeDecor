@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import CustomInput from "../../../components/ui/customInput/CustomInput";
-import CustomLink from "../../../components/ui/customLink/CustomLink";
 import style from "./PersonalInformation.module.css";
 import { useSelector } from "react-redux";
 import { RootState, store } from "../../../store/Store";

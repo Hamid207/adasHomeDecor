@@ -118,7 +118,8 @@
 .right_inputs > button {
   width: 330px;
   height: 54px;
-  background-color: #b8926a;
+  /* background-color: #b8926a; */
+  /* background-color: silver; */
   font-family: "Raleway";
   font-size: 16px;
   font-style: normal;
@@ -192,4 +193,12 @@
   line-height: 24px;
   text-align: center;
   margin-bottom: 36px;
+}
+
+.finish_button_silver {
+  background-color: silver;
+}
+
+.finish_button_brown {
+  background-color: #b8926a;
 }
