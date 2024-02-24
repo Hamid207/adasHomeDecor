@@ -1,9 +1,11 @@
 import { useState } from "react";
 import style from "./chekoutPage.module.css";
+import CustomLink from "../../components/ui/customLink/CustomLink";
 
 const ChekoutPage = () => {
   const [pammentBtn, setPammentBtn] = useState<boolean>(true);
   const [deliverBtn, setDeliverBtn] = useState<boolean>(true);
+  const [completeView, setCompleteView] = useState<boolean>(false);
 
   const handleSumbit: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
@@ -95,10 +97,42 @@ const ChekoutPage = () => {
             <input type="text" placeholder="CARD NUMBER" />
             <input type="text" placeholder="EXPIRY DATE" />
             <input type="text" placeholder="CW" />
-            <button>FINISH ORDER</button>
+            <button onClick={() => setCompleteView(!completeView)}>
+              FINISH ORDER
+            </button>
           </form>
         </div>
       </div>
+      {completeView && (
+        <div className={style.complete_back_body}>
+          <div className={style.complete_body}>
+            <div className={style.back_btn_body}>
+              <button onClick={() => setCompleteView(!completeView)}>
+                <img src="/src/assets/ph_X.png" alt="" />
+              </button>
+            </div>
+            <div className={style.complete_main_body}>
+              <div>
+                <h2>YOUR ORDER IS COMPLETE!</h2>
+              </div>
+
+              <div className={style.complete_text_body}>
+                <p>
+                  You will be receiving a confirmation email with order details.
+                </p>
+              </div>
+              <CustomLink
+                to="/"
+                text="HOME PAGE"
+                width="214px"
+                height="44px"
+                backColor="brown"
+                hidden={true}
+              ></CustomLink>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
