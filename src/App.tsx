@@ -18,6 +18,7 @@ import MyAccountLayout from "./components/layouts/myAccountLayout/MyAccountLayou
 import WishlistPage from "./pages/myAcoutnPage/WishlistPage/WishlistPage";
 import PersonaInformation from "./pages/myAcoutnPage/personalInformation/PersonaInformation";
 import ShoppingCartPage from "./pages/shoppingCartPage/ShoppingCartPage";
+import ChekoutPage from "./pages/chekout/chekoutPage";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="collections" element={<CollectionsPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="shoppingcart" element={<ShoppingCartPage />} />
+          <Route path="chekout" element={<ChekoutPage />} />
           <Route path="/myaccount" element={<MyAccountLayout />}>
             <Route index element={<PersonaInformation />} />
             <Route path="wishlist" element={<WishlistPage />} />

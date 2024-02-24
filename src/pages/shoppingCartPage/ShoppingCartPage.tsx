@@ -46,7 +46,7 @@ const ShoppingCartPage = () => {
             <p>{shoppingCartsTotalPrice}$</p>
           </div>
           <CustomLink
-            to="/"
+            to="/chekout"
             text="CHECKOUT"
             width="270px"
             height="54px"
