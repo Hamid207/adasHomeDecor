@@ -1,7 +1,10 @@
 import style from "./MyAccountLayout.module.css";
 import "../../../assets/Container.css";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/Store";
+import SerachOpacityView from "../../serachOpacityView/serachOpacityView";
 
 const logOutButtobAction = () => {
   localStorage.clear();
@@ -26,6 +29,10 @@ const MyAccountLayout = () => {
       setBold(!bold);
     }
   };
+
+  const searchViewInfo = useSelector(
+    (state: RootState) => state.searchOpacityView.boolean
+  );
 
   return (
     <div className="container">
@@ -101,6 +108,7 @@ const MyAccountLayout = () => {
         </div>
         <Outlet />
       </div>
+      {searchViewInfo && <SerachOpacityView viewHeight="100%" />}
     </div>
   );
 };

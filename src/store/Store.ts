@@ -9,6 +9,7 @@ import shoppingCartSlice, {
   fetchShoppingCart,
 } from "./slices/shoppingCartSlice";
 import shoppingCartItemsCountAndPriceCountSlice from "./slices/shoppingCartItemsCountAndPriceCountSlice";
+import searchOpacityViewSlice from "./slices/searchOpacityViewSlice";
 
 export const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ export const store = configureStore({
     shoppingCart: shoppingCartSlice.reducer,
     shoppingCartItemCountAndToalPrice:
       shoppingCartItemsCountAndPriceCountSlice.reducer,
+    searchOpacityView: searchOpacityViewSlice.reducer,
   },
 });
 

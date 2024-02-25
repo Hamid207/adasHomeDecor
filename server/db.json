@@ -702,6 +702,83 @@
       "price": "750",
       "productId": 3,
       "id": 2
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Elegant Bedside Table",
+      "price": "300",
+      "productId": 4,
+      "id": 3
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Elegant Dining Chair",
+      "price": "120",
+      "productId": 9,
+      "id": 4
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Elegant Dressing Table",
+      "price": "480",
+      "productId": 12,
+      "id": 5
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "title": "Versatile Bookcase",
+      "price": "320",
+      "productId": 13,
+      "id": 6
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "title": "Comfortable Recliner",
+      "price": "520",
+      "productId": 14,
+      "id": 7
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Modern Bar Stool",
+      "price": "180",
+      "productId": 17,
+      "id": 8
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "title": "Classic Armchair",
+      "price": "420",
+      "productId": 16,
+      "id": 9
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "title": "Sleek Side Table",
+      "price": "180",
+      "productId": 15,
+      "id": 10
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Elegant Vanity Table",
+      "price": "550",
+      "productId": 18,
+      "id": 11
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Modern Sideboard",
+      "price": "480",
+      "productId": 19,
+      "id": 12
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Versatile Storage Bench",
+      "price": "280",
+      "productId": 20,
+      "id": 13
     }
   ],
   "cart": [

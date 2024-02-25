@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { useDispatch } from "react-redux";
 import { totalPriceEmpty } from "../../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
+import { opacityView } from "../../../store/slices/searchOpacityViewSlice";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
@@ -27,6 +28,8 @@ const Header = () => {
   const [token, setToken] = useLocalStorage("", "userToken");
   const dispatch = useDispatch();
 
+  const [searchView, setSearchView] = useState<boolean>(true);
+
   useEffect(() => {
     if (token == "") {
       setUserLogin(false);
@@ -35,43 +38,78 @@ const Header = () => {
     }
   }, [token]);
 
+  const searchButtonAction = () => {
+    setSearchView(!searchView);
+    dispatch(opacityView(true));
+  };
+
+  const searchCancelButtonAction = () => {
+    setSearchView(!searchView);
+    dispatch(opacityView(false));
+  };
+
   return (
     <header className="container">
       <nav>
-        <div className={style.headerMain}>
-          <div className={style.header_left}>
-            <Link to="" className={style.azBtn}>
-              Az
-            </Link>
-            <Link to="/" className={style.search_btn}>
-              <img
-                src="/public/header/search.png"
-                alt=""
-                className={style.img}
-              />
-            </Link>
+        {(searchView && (
+          <div className={style.headerMain}>
+            <div className={style.header_left}>
+              <Link to="" className={style.azBtn}>
+                Az
+              </Link>
+              <button className={style.search_btn} onClick={searchButtonAction}>
+                <img
+                  src="/public/header/search.png"
+                  alt=""
+                  className={style.img}
+                />
+              </button>
+            </div>
+            <div>
+              <Link to="/" className={style.home_link}>
+                <p className={style.header_title}>HomeDecor</p>
+              </Link>
+            </div>
+            <div className={style.header_right}>
+              <Link
+                to="/shoppingcart"
+                className={style.shop_user_button}
+                onClick={() => dispatch(totalPriceEmpty())}
+              >
+                <img
+                  src="/public/header/shop.png"
+                  alt=""
+                  className={style.img}
+                />
+              </Link>
+              <Link
+                to={(userLogin && "/myaccount") || "/login"}
+                className={style.shop_user_button}
+              >
+                <img
+                  src="/public/header/user.png"
+                  alt=""
+                  className={style.img}
+                />
+              </Link>
+            </div>
           </div>
-          <div>
-            <Link to="/" className={style.home_link}>
-              <p className={style.header_title}>HomeDecor</p>
-            </Link>
+        )) || (
+          <div className={style.search_back_view_body}>
+            <div>
+              <div>
+                <img src="/src/assets/homePapeImage/search2Img.png" alt="" />
+              </div>
+              <form action="">
+                <input type="text" placeholder="SEARCH OUR STORE" />
+              </form>
+            </div>
+            <button onClick={searchCancelButtonAction}>
+              <img src="/src/assets/ph_X.png" alt="" />
+            </button>
           </div>
-          <div className={style.header_right}>
-            <Link
-              to="/shoppingcart"
-              className={style.shop_user_button}
-              onClick={() => dispatch(totalPriceEmpty())}
-            >
-              <img src="/public/header/shop.png" alt="" className={style.img} />
-            </Link>
-            <Link
-              to={(userLogin && "/myaccount") || "/login"}
-              className={style.shop_user_button}
-            >
-              <img src="/public/header/user.png" alt="" className={style.img} />
-            </Link>
-          </div>
-        </div>
+        )}
+
         <div className={style.header_nav}>
           <ul className={style.header_nav_list}>
             <li>

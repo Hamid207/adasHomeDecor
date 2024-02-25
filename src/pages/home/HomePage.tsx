@@ -13,11 +13,17 @@ import { RootState } from "../../store/Store";
 import { Categorie } from "../../services/categories.service";
 import { Product } from "../../services/products.service";
 import { Collection } from "../../services/collections.service";
+import { useEffect, useState } from "react";
+import SerachOpacityView from "../../components/serachOpacityView/serachOpacityView";
 
 const HomePage = () => {
   const categories = useSelector((state: RootState) => state.categories);
   const products = useSelector((state: RootState) => state.productts);
   const collections = useSelector((state: RootState) => state.collections);
+
+  const searchViewInfo = useSelector(
+    (state: RootState) => state.searchOpacityView.boolean
+  );
   return (
     <>
       <MainImageAndText />
@@ -107,6 +113,7 @@ const HomePage = () => {
         })}
       </CollectionSlider>
       <Contact pageName="home" marginTop="120px" />
+      {searchViewInfo && <SerachOpacityView viewHeight="600%" />}
     </>
   );
 };

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import style from "./chekoutPage.module.css";
 import CustomLink from "../../components/ui/customLink/CustomLink";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/Store";
+import SerachOpacityView from "../../components/serachOpacityView/serachOpacityView";
 
 type FormFields = {
   name: HTMLInputElement;
@@ -122,6 +125,10 @@ const ChekoutPage = () => {
     userCartNumber,
     userCw,
   ]);
+
+  const searchViewInfo = useSelector(
+    (state: RootState) => state.searchOpacityView.boolean
+  );
 
   return (
     <>
@@ -297,6 +304,7 @@ const ChekoutPage = () => {
           </div>
         </div>
       )}
+      {searchViewInfo && <SerachOpacityView viewHeight="110%" />}
     </>
   );
 };

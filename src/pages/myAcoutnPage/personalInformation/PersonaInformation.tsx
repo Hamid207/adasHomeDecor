@@ -60,13 +60,10 @@ const PersonaInformation = () => {
       };
       fetchData();
       store.dispatch(fetchUsers());
-      console.log("SAVE BUTTON ACTION", user);
     }
   };
 
   useEffect(() => {
-    console.log("USE EFFECT reaoad");
-
     if (user) {
       console.log(user);
 
