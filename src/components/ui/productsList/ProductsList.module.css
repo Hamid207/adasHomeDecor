@@ -11,9 +11,6 @@
   margin-bottom: 20px;
 }
 
-.list_body {
-}
-
 .list {
   display: flex;
   gap: 25px;

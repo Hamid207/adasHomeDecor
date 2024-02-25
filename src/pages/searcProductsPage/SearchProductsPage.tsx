@@ -43,7 +43,7 @@ const SearchProductsPage = () => {
         </div>
       )) || (
         <div className={style.serach_result_zero}>
-          <p>The search did not yield any results!</p>
+          <p>The search didn't yield any results!</p>
         </div>
       )}
     </>

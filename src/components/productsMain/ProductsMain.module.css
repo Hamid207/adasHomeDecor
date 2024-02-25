@@ -82,3 +82,42 @@
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
 }
+
+.sidebar > h2 {
+  color: #b8926a;
+  font-family: "Raleway";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.input {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+.input[type="checkbox"] {
+  background: url("/public//main/products/checkOff.png") no-repeat;
+}
+
+.label {
+  color: #2d2d2b;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.for_top {
+  margin-top: 50px;
+}
