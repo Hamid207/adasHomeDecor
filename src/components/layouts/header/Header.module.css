@@ -77,6 +77,7 @@
   display: flex;
   justify-content: space-between;
   gap: 70px;
+  flex-wrap: wrap;
 }
 
 .link {
@@ -150,4 +151,7 @@
   width: 26px;
   height: 26px;
   background-color: #eae6df;
+}
+
+@media (max-width: 320px) {
 }

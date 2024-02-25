@@ -10,11 +10,6 @@ import {
   searchValue,
 } from "../../../store/slices/searchOpacityViewSlice";
 
-import { Product } from "../../../services/products.service";
-
-// const setActive = ({ isActive }: { isActive: boolean }) =>
-//   isActive ? style.active : "";
-
 type FormFields = {
   value: HTMLInputElement;
 };
@@ -69,18 +64,6 @@ const Header = () => {
     const form = event.currentTarget;
     const { value } = form;
     setSerachValue(value.value);
-  };
-
-  const searchAction = () => {
-    // if (serachValue == "") {
-    //   return;
-    // } else {
-    //   const searcgProducts = products.filter((products: Product) => {
-    //     return products.title.toLowerCase().includes(serachValue.toLowerCase());
-    //   });
-    //   console.log(searcgProducts);
-    //   navigate("/searchproductspage");
-    // }
   };
 
   const tap = () => {
@@ -148,7 +131,7 @@ const Header = () => {
               <div>
                 <img src="/src/assets/homePapeImage/search2Img.png" alt="" />
               </div>
-              <form onSubmit={handleSumbit} onChange={searchAction}>
+              <form onSubmit={handleSumbit}>
                 <button onClick={tap}></button>
                 <input
                   type="text"
