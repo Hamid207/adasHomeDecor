@@ -5,7 +5,12 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "../../../hooks/useLocalStorage";
 import { useDispatch } from "react-redux";
 import { totalPriceEmpty } from "../../../store/slices/shoppingCartItemsCountAndPriceCountSlice";
-import { opacityView } from "../../../store/slices/searchOpacityViewSlice";
+import {
+  opacityView,
+  searchValue,
+} from "../../../store/slices/searchOpacityViewSlice";
+
+import { Product } from "../../../services/products.service";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
@@ -52,6 +57,7 @@ const Header = () => {
   const searchCancelButtonAction = () => {
     setSearchView(!searchView);
     dispatch(opacityView(false));
+    setSerachValue("");
   };
 
   const [serachValue, setSerachValue] = useState<string>("");
@@ -63,6 +69,27 @@ const Header = () => {
     const form = event.currentTarget;
     const { value } = form;
     setSerachValue(value.value);
+  };
+
+  const searchAction = () => {
+    // if (serachValue == "") {
+    //   return;
+    // } else {
+    //   const searcgProducts = products.filter((products: Product) => {
+    //     return products.title.toLowerCase().includes(serachValue.toLowerCase());
+    //   });
+    //   console.log(searcgProducts);
+    //   navigate("/searchproductspage");
+    // }
+  };
+
+  const tap = () => {
+    if (serachValue == "") {
+      return;
+    } else {
+      dispatch(searchValue(serachValue));
+      navigate("/searchproductspage");
+    }
   };
 
   const changeSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -121,7 +148,8 @@ const Header = () => {
               <div>
                 <img src="/src/assets/homePapeImage/search2Img.png" alt="" />
               </div>
-              <form onSubmit={handleSumbit}>
+              <form onSubmit={handleSumbit} onChange={searchAction}>
+                <button onClick={tap}></button>
                 <input
                   type="text"
                   placeholder="SEARCH OUR STORE"
