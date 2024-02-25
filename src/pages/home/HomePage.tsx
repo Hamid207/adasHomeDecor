@@ -13,8 +13,7 @@ import { RootState } from "../../store/Store";
 import { Categorie } from "../../services/categories.service";
 import { Product } from "../../services/products.service";
 import { Collection } from "../../services/collections.service";
-import { useEffect, useState } from "react";
-import SerachOpacityView from "../../components/serachOpacityView/serachOpacityView";
+import SerachOpacityView from "../../components/serachOpacityView/SerachOpacityView";
 
 const HomePage = () => {
   const categories = useSelector((state: RootState) => state.categories);
@@ -48,6 +47,7 @@ const HomePage = () => {
                 width="330px"
                 isHidden
                 img={categorie.image}
+                id={categorie.id.toString()}
               />
             </SwiperSlide>
           );
@@ -107,6 +107,7 @@ const HomePage = () => {
                 width="700px"
                 isHidden
                 img={collection.image}
+                id={collection.id.toString()}
               />
             </SwiperSlide>
           );

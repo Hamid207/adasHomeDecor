@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import "../../../assets/Container.css";
 import style from "./Header.module.css";
 import { useEffect, useState } from "react";
@@ -9,6 +9,10 @@ import { opacityView } from "../../../store/slices/searchOpacityViewSlice";
 
 // const setActive = ({ isActive }: { isActive: boolean }) =>
 //   isActive ? style.active : "";
+
+type FormFields = {
+  value: HTMLInputElement;
+};
 
 const setActive = ({ isActive }: { isActive: boolean }) =>
   isActive
@@ -24,6 +28,8 @@ const setActive = ({ isActive }: { isActive: boolean }) =>
     : { color: "#2D2D2B" };
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const [userLogin, setUserLogin] = useState<boolean>(false);
   const [token, setToken] = useLocalStorage("", "userToken");
   const dispatch = useDispatch();
@@ -46,6 +52,21 @@ const Header = () => {
   const searchCancelButtonAction = () => {
     setSearchView(!searchView);
     dispatch(opacityView(false));
+  };
+
+  const [serachValue, setSerachValue] = useState<string>("");
+
+  const handleSumbit: React.FormEventHandler<HTMLFormElement & FormFields> = (
+    event
+  ) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const { value } = form;
+    setSerachValue(value.value);
+  };
+
+  const changeSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSerachValue(event.currentTarget.value);
   };
 
   return (
@@ -100,8 +121,13 @@ const Header = () => {
               <div>
                 <img src="/src/assets/homePapeImage/search2Img.png" alt="" />
               </div>
-              <form action="">
-                <input type="text" placeholder="SEARCH OUR STORE" />
+              <form onSubmit={handleSumbit}>
+                <input
+                  type="text"
+                  placeholder="SEARCH OUR STORE"
+                  onChange={changeSearchValue}
+                  value={serachValue}
+                />
               </form>
             </div>
             <button onClick={searchCancelButtonAction}>

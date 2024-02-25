@@ -5,10 +5,41 @@ import ProductsList from "../ui/productsList/ProductsList";
 import style from "./ProductsMain.module.css";
 import { RootState } from "../../store/Store";
 import { Product } from "../../services/products.service";
+import { useParams } from "react-router-dom";
 
 const ProductsMain = () => {
+  const { id } = useParams() as { id: string };
+
   const products = useSelector((state: RootState) => state.productts);
   window.scrollTo(0, 0);
+
+  const cateforiesArray = [
+    "ALL",
+    "SOFAS",
+    "BEDS AND HEADBOARDS",
+    "RUGS",
+    "CUSHIONS",
+    "HEADBOARDS",
+  ];
+  const collections = [
+    "ALL",
+    "BEDROOM",
+    "LIVING ROOM",
+    "KITCHEN",
+    "LIBRARY",
+    "OFFICE",
+    "LAUNDRY ROOM",
+    "GUEST ROOM",
+    "FAMILY ROOM",
+    "BATHROOM",
+  ];
+
+  function convertToTitleCase(str: string) {
+    if (!str) {
+      return "";
+    }
+    return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
+  }
 
   return (
     <section>
@@ -16,10 +47,13 @@ const ProductsMain = () => {
         <div className={style.navigation_title_body}>
           <ul>
             <li>Home</li>
-            <li>Products</li>
+            <li>
+              {(id && convertToTitleCase(collections[Number(id)])) ||
+                "Products"}
+            </li>
           </ul>
         </div>
-        <p>PRODUCTS</p>
+        <p>{(id && collections[Number(id)]) || "Products"}</p>
         <div className={style.text_body_and_sortBtn_body}>
           <div className={style.text_body}>
             <p>
@@ -39,35 +73,44 @@ const ProductsMain = () => {
         </div>
         <div className={style.grid_container}>
           <div className={style.sidebar}>
-            <ProductsList
-              name="CATEGORIES"
-              lists={[
-                "ALL",
-                "SOFAS",
-                "BEDS AND HEADBOARDS",
-                "RUGS",
-                "CUSHIONS",
-                "HEADBOARDS",
-              ]}
-            />
-            <ProductsList
-              name="COLLECTIONS"
-              lists={[
-                "ALL",
-                "BEDROOM",
-                "LIVING ROOM",
-                "KITCHEN",
-                "LIBRARY",
-                "OFFICE",
-                "LAUNDRY ROOM",
-                "GUEST ROOM",
-                "FAMILY ROOM",
-                "BATHROOM",
-              ]}
-            />
+            <ProductsList name="CATEGORIES" lists={cateforiesArray} id={id} />
+            <ProductsList name="COLLECTIONS" lists={collections} id={id} />
           </div>
           <div className={style.productsBody}>
-            {products.map((products: Product) => {
+            {(id &&
+              products
+                .filter(
+                  (prodacts: Product) => prodacts.collectionId === Number(id)
+                )
+                .map((product: Product) => {
+                  return (
+                    <ProductsGrid
+                      key={product.id}
+                      name={product.title}
+                      width="330px"
+                      height="267px"
+                      img={product.image}
+                      price={product.price}
+                      desc={product.desc}
+                      id={product.id}
+                    />
+                  );
+                })) ||
+              products.map((products: Product) => {
+                return (
+                  <ProductsGrid
+                    key={products.id}
+                    name={products.title}
+                    width="330px"
+                    height="267px"
+                    img={products.image}
+                    price={products.price}
+                    desc={products.desc}
+                    id={products.id}
+                  />
+                );
+              })}
+            {/* {products.map((products: Product) => {
               return (
                 <ProductsGrid
                   key={products.id}
@@ -80,7 +123,7 @@ const ProductsMain = () => {
                   id={products.id}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </div>

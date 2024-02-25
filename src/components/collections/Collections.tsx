@@ -6,7 +6,6 @@ import { Collection } from "../../services/collections.service";
 
 const Collections = () => {
   const collections = useSelector((state: RootState) => state.collections);
-  window.scrollTo(0, 0);
 
   return (
     <section>
@@ -35,6 +34,7 @@ const Collections = () => {
                 height="267px"
                 isHidden
                 img={collections.image}
+                id={collections.id.toString()}
               />
             );
           })}

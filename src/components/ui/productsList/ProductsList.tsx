@@ -3,15 +3,11 @@ import style from "./ProductsList.module.css";
 interface List {
   name: string;
   lists: string[];
+  id: string;
 }
 
 // const ProductsList = ({ list, name }: { list: string[]; name: string }) => {
 const ProductsList = (props: List) => {
-  //   let [list, setList] = useState<string[]>([]);
-  //   useEffect(() => {
-  //     setList(props.lists);
-  //   }, []);
-
   return (
     <div className={style.body}>
       <p>{props.name}</p>
