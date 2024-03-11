@@ -3,7 +3,7 @@ import style from "./chekoutPage.module.css";
 import CustomLink from "../../components/ui/customLink/CustomLink";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/Store";
-import SerachOpacityView from "../../components/serachOpacityView/serachOpacityView";
+import SerachOpacityView from "../../components/serachOpacityView/SerachOpacityView";
 
 type FormFields = {
   name: HTMLInputElement;

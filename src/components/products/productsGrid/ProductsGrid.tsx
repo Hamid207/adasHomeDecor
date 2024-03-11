@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./ProductsGrid.module.css";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -22,33 +22,38 @@ interface ProductCard {
 const ProductsGrid = (props: ProductCard) => {
   const favorites = useSelector((state: RootState) => state.faforites);
   const [likeBtn, setLikeBtn] = useState<boolean>(false);
-
+  const navigation = useNavigate();
   const togle = () => {
-    setLikeBtn(!likeBtn);
-    const favorit = favorites.find(
-      (favorit: FavoritesModel) => favorit.productId == props.id
-    );
+    const userToken = JSON.parse(localStorage.getItem("userToken") || "{}");
+    if (userToken == "") {
+      navigation("/login");
+    } else {
+      setLikeBtn(!likeBtn);
+      const favorit = favorites.find(
+        (favorit: FavoritesModel) => favorit.productId == props.id
+      );
 
-    if (!likeBtn && favorit == undefined) {
-      const fetchData = async () => {
-        await FavoritesService.getAddFavorites({
-          image: props.img,
-          price: props.price,
-          title: props.name,
-          desc: props.desc,
-          productId: props.id,
-        });
+      if (!likeBtn && favorit == undefined) {
+        const fetchData = async () => {
+          await FavoritesService.getAddFavorites({
+            image: props.img,
+            price: props.price,
+            title: props.name,
+            desc: props.desc,
+            productId: props.id,
+          });
 
-        //fetchFavorites - relaod wishlist
-        store.dispatch(fetchFavorites());
-      };
+          //fetchFavorites - relaod wishlist
+          store.dispatch(fetchFavorites());
+        };
 
-      fetchData();
-    } else if (likeBtn && favorit != undefined) {
-      // const fetchDelete = async () => {
-      //   await FavoritesService.getDeleteFavorites(props.id);
-      // };
-      // fetchDelete();
+        fetchData();
+      } else if (likeBtn && favorit != undefined) {
+        // const fetchDelete = async () => {
+        //   await FavoritesService.getDeleteFavorites(props.id);
+        // };
+        // fetchDelete();
+      }
     }
   };
 

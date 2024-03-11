@@ -120,14 +120,14 @@ const ProductsMain: React.FC = () => {
               impedit quo minus id quod maxime.
             </p>
           </div>
-          <CustomLink
+          {/* <CustomLink
             to="/products"
             text="SORT BY"
             width="330px"
             height="54px"
             backColor="none"
             hidden={true}
-          ></CustomLink>
+          ></CustomLink> */}
         </div>
         <div className={style.grid_container}>
           <div className={style.sidebar}>

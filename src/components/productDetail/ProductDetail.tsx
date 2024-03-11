@@ -144,7 +144,7 @@ const ProductDetail = () => {
             <h3 className={style.price}>{price.toString()}$</h3>
             <div className={style.buttons_body}>
               <CustomLink
-                to=""
+                to="/chekout"
                 text="BUY NOW"
                 width="330px"
                 height="54px"

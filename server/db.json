@@ -184,7 +184,7 @@
       "id": 21,
       "collectionId": 1,
       "categoriesId": 6,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "title": "Contemporary Desk",
       "desc": "Create a stylish and productive workspace with this contemporary desk. Its sleek design and spacious surface make it perfect for studying or working from home. Enhance your productivity and style with this chic desk.",
       "price": "420",
@@ -194,7 +194,7 @@
       "id": 22,
       "collectionId": 2,
       "categoriesId": 3,
-      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "desc": "22 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
       "price": "140",
@@ -204,7 +204,7 @@
       "id": 23,
       "collectionId": 3,
       "categoriesId": 2,
-      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "desc": "23 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
       "price": "140",
@@ -214,7 +214,7 @@
       "id": 24,
       "collectionId": 4,
       "categoriesId": 5,
-      "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "desc": "24 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
       "price": "140",
@@ -681,11 +681,17 @@
   },
   "users": [
     {
-      "fullname": "hamid",
       "email": "hamidmanafov@gmail.com",
       "password": "hamid",
       "userToken": "555047606814145",
       "id": 1
+    },
+    {
+      "fullname": "faxri",
+      "email": "faxri@gmail.com",
+      "password": "faxri",
+      "userToken": "954404030235515",
+      "id": 2
     }
   ],
   "favorites": [
@@ -779,16 +785,31 @@
       "price": "280",
       "productId": 20,
       "id": 13
+    },
+    {
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Premium Wooden Dining Table",
+      "price": "550",
+      "productId": 2,
+      "id": 14
     }
   ],
   "cart": [
     {
-      "id": 3,
-      "title": "Modern Fabric Sofa Set",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
-      "price": "750",
+      "id": 2,
+      "title": "Premium Wooden Dining Table",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "price": "550",
       "count": 1,
-      "countPrice": 750
+      "countPrice": 550
+    },
+    {
+      "id": 24,
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "price": "140",
+      "count": 4,
+      "countPrice": 560
     }
   ]
 }
